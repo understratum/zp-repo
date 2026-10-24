@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://www.greenwoodsoftware.com/less/download.html",
+  "pattern": "less-(\\d+)\\.tar\\.gz",
+  "url_template": "https://www.greenwoodsoftware.com/less/{name}-{version}.tar.gz"
+}
