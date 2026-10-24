@@ -1,0 +1,7 @@
+.{
+    .name = "libevent",
+    .version = "2.1.13-stable",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz",
+    .deps = .{},
+}
