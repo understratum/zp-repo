@@ -270,16 +270,36 @@ def check_package(pkg_dir: str, name: str, dry_run: bool):
     if kind == "none":
         return "skip", "обновления отключены (update.json)"
 
-        # Скачиваем новый архив и считаем его хэш.
-    # Если скачать не удалось (404, нет ассета у релиза и т.п.) --
-    # НЕ обновляем, чтобы не записать битый .url/.hash.
+    # --- определяем новую версию и новый URL ----------------------------
+    try:
+        if kind in ("auto", "github"):
+            new_version, new_url = resolve_github(cur_version, cur_url)
+        elif kind == "listing":
+            new_version, new_url = resolve_listing(cfg, name, cur_version, cur_url)
+        else:
+            return "skip", f"неизвестный type={kind!r} в update.json"
+    except UpstreamError as e:
+        return "error", str(e)
+    except Exception as e:
+        return "error", f"непредвиденная ошибка: {e}"
+
+    # --- версия не изменилась ------------------------------------------
+    if new_version == cur_version:
+        return "same", f"{cur_version} -- актуально"
+
+    # --- скачиваем новый архив и считаем хэш ---------------------------
+    # Если скачать не удалось (404, нет ассета) -- НЕ обновляем.
     try:
         new_hash = compute_sha256(new_url)
     except Exception as e:
         return "error", f"не удалось скачать {new_url}: {e}"
 
+    direction = "обновление" if version_key(new_version) > version_key(cur_version) else "ОТКАТ"
+    print(f"    {direction}: {cur_version} -> {new_version}")
+
+    # --- собираем новое содержимое .zon --------------------------------
     new_content = set_field(content, "version", new_version)
-    if new_url and new_url != cur_url:
+    if new_url != cur_url:
         new_content = set_field(new_content, "url", new_url)
     new_content = set_field(new_content, "hash", new_hash)
 
