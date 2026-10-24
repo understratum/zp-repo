@@ -1,0 +1,8 @@
+.{
+    .name = "grep",
+    .version = "3.12",
+    .license = "GPL-3.0-or-later",
+    .url = "https://ftp.gnu.org/gnu/grep/grep-3.12.tar.xz",
+    .hash = "2649b27c0e90e632eadcd757be06c6e9a4f48d941de51e7c0f83ff76408a07b9",
+    .deps = .{"pcre2"},
+}
