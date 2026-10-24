@@ -1,0 +1,8 @@
+.{
+    .name = "xz",
+    .version = "5.8.4",
+    .license = "0BSD",
+    .url = "https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz",
+    .hash = "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+    .deps = .{},
+}
