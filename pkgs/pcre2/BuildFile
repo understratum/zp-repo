@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+NAME=pcre2
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure \
+  --prefix=/usr \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --enable-shared \
+  --disable-static
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
