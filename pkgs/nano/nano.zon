@@ -3,5 +3,6 @@
     .version = "9.2",
     .license = "GPL-3.0-or-later",
     .url = "https://www.nano-editor.org/dist/v9/nano-9.2.tar.xz",
+    .hash = "05ecb99247b782e8a5b3a25ed4101dd034b0236902f7449bc9795b717642f7e9",
     .deps = .{"ncurses"},
 }
