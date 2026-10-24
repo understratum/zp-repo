@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://www.lua.org/ftp/",
+  "pattern": "lua-([0-9.]+)\\.tar\\.gz",
+  "url_template": "https://www.lua.org/ftp/{name}-{version}.tar.gz"
+}
