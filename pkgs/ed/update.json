@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://ftp.gnu.org/gnu/ed/",
+  "pattern": "ed-([0-9.]+)\.tar\.lz",
+  "url_template": "https://ftp.gnu.org/gnu/ed/{name}-{version}.tar.lz"
+}

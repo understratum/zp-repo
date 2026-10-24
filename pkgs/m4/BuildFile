@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+NAME=m4
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure \
+  --prefix=/usr \
+  --sysconfdir=/etc \
+  --localstatedir=/var
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

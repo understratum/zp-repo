@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+NAME=make
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure \
+  --prefix=/usr \
+  --without-guile
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://ftp.gnu.org/gnu/tar/",
+  "pattern": "tar-([0-9.]+)\.tar\.gz",
+  "url_template": "https://ftp.gnu.org/gnu/tar/{name}-{version}.tar.gz"
+}
