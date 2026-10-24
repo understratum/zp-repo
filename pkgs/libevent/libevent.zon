@@ -3,5 +3,6 @@
     .version = "2.1.13-stable",
     .license = "BSD-3-Clause",
     .url = "https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz",
+    .hash = "f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c",
     .deps = .{},
 }
