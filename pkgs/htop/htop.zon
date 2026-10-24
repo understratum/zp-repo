@@ -1,1 +1,7 @@
-
+.{
+    .name = "htop",
+    .version = "3.5.3",
+    .license = "GPL-2.0-or-later",
+    .url = "https://github.com/htop-dev/htop/releases/download/3.5.3/htop-3.5.3.tar.xz",
+    .deps = .{"ncurses"},
+}
