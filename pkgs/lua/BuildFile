@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+NAME=lua
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+make -j"$JOBS" linux
+
+mkdir -p "$DESTDIR/usr"
+make install INSTALL_TOP="$DESTDIR/usr"
