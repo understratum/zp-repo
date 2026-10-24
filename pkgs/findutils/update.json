@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://ftp.gnu.org/gnu/findutils/",
+  "pattern": "findutils-([0-9.]+)\\.tar\\.xz",
+  "url_template": "https://ftp.gnu.org/gnu/findutils/{name}-{version}.tar.xz"
+}
