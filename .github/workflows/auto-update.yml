@@ -9,6 +9,10 @@ permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: update-packages
+  cancel-in-progress: false
+
 jobs:
   update-packages:
     runs-on: ubuntu-latest
@@ -22,6 +26,8 @@ jobs:
           python-version: '3.11'
 
       - name: Run Update Bot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/update_bot.py
 
       - name: Create Pull Request
@@ -29,8 +35,12 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: auto-update package versions"
-          title: "Bot: Обновление версий пакетов"
-          body: "Автоматическое обновление `.zon` файлов на основе последних релизов GitHub."
+          title: "Bot: обновление версий пакетов"
+          body: |
+            Автоматическое обновление `.version` и `.url` в `pkgs/*/*.zon`
+            на основе последних релизов апстрима.
+
+            **Перед мержем проверь, что пакеты собираются.**
           branch: "bot/auto-updates"
           base: "main"
           delete-branch: true
