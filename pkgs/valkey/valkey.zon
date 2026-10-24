@@ -1,0 +1,8 @@
+.{
+    .name = "valkey",
+    .version = "9.1.2",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/valkey-io/valkey/releases/download/9.1.2/valkey-9.1.2.tar.gz",
+    .hash = "19c23908e7d57e8d91ef85b41f5646307582f10f4f0fb999bbf89ed24ec9c983",
+    .deps = .{},
+}
