@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://ftp.gnu.org/gnu/patch/",
+  "pattern": "patch-([0-9.]+)\\.tar\\.xz",
+  "url_template": "https://ftp.gnu.org/gnu/patch/{name}-{version}.tar.xz"
+}
