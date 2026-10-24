@@ -1,0 +1,8 @@
+.{
+    .name = "lua",
+    .version = "5.5.1",
+    .license = "MIT",
+    .url = "https://www.lua.org/ftp/lua-5.5.1.tar.gz",
+    .hash = "1c4b4068d67061f2a2231ad2b5422e77acea1487ea9890f6320af614f4373dce",
+    .deps = .{},
+}
