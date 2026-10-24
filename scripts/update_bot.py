@@ -12,6 +12,8 @@ zp update bot.
 Запуск:  python3 scripts/update_bot.py [--dry-run]
 """
 
+import hashlib
+
 from __future__ import annotations
 
 import argparse
@@ -30,9 +32,38 @@ GITHUB_RELEASE_URL_RE = re.compile(
     r"(?P<tag>[^/]+)(?P<asset>/.*)$"
 )
 
+def compute_sha256(url: str) -> str:
+    """Качает файл по частям и возвращает sha256 hexdigest.
+
+    Бросает исключение, если файл недоступен или сервер вернул ошибку --
+    это важно, чтобы не записать хэш от битой/несуществующей ссылки.
+    """
+    h = hashlib.sha256()
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
+        while True:
+            chunk = resp.read(1 << 20)  # 1 MiB
+            if not chunk:
+                break
+            h.update(chunk)
+    return h.hexdigest()
+
+def set_field(content: str, field: str, value: str) -> str:
+    """Обновляет поле, а если его нет -- вставляет перед последней '}'."""
+    if re.search(rf'\.{field}\s*=\s*"[^"]*"', content):
+        return update_field(content, field, value)
+
+    idx = content.rfind("}")
+    if idx == -1:
+        return content
+
+    insert = f'    .{field} = "{value}",\n'
+    return content[:idx] + insert + content[idx:]
 
 class UpstreamError(Exception):
     """Не удалось получить данные об апстриме. Не роняем весь прогон."""
+
+
 
 
 # --------------------------------------------------------------------------- #
@@ -239,31 +270,24 @@ def check_package(pkg_dir: str, name: str, dry_run: bool):
     if kind == "none":
         return "skip", "обновления отключены (update.json)"
 
+        # Скачиваем новый архив и считаем его хэш.
+    # Если скачать не удалось (404, нет ассета у релиза и т.п.) --
+    # НЕ обновляем, чтобы не записать битый .url/.hash.
     try:
-        if kind in ("auto", "github"):
-            new_version, new_url = resolve_github(cur_version, cur_url)
-        elif kind == "listing":
-            new_version, new_url = resolve_listing(cfg, name, cur_version, cur_url)
-        else:
-            return "skip", f"неизвестный type={kind!r} в update.json"
-    except UpstreamError as e:
-        return "error", str(e)
+        new_hash = compute_sha256(new_url)
+    except Exception as e:
+        return "error", f"не удалось скачать {new_url}: {e}"
 
-    if new_version == cur_version:
-        return "same", f"{cur_version} -- актуально"
-
-    direction = "обновление" if version_key(new_version) > version_key(cur_version) else "ОТКАТ"
-    print(f"    {direction}: {cur_version} -> {new_version}")
-
-    new_content = update_field(content, "version", new_version)
+    new_content = set_field(content, "version", new_version)
     if new_url and new_url != cur_url:
-        new_content = update_field(new_content, "url", new_url)
+        new_content = set_field(new_content, "url", new_url)
+    new_content = set_field(new_content, "hash", new_hash)
 
     if new_content == content:
         return "skip", "нечего менять"
 
     if dry_run:
-        print(f"    [dry-run] {zon_path} не записан")
+        print(f"    [dry-run] {zon_path} не записан (хэш: {new_hash})")
     else:
         write_text(zon_path, new_content)
 
