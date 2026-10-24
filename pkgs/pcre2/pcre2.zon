@@ -1,0 +1,8 @@
+.{
+    .name = "pcre2",
+    .version = "10.49",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.49/pcre2-10.49.tar.gz",
+    .hash = "929f0b20e62879252a15886b06c89f1edef61a363cbd5826fb041080a5e557ae",
+    .deps = .{},
+}
