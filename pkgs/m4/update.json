@@ -1,6 +1,6 @@
 {
   "type": "listing",
   "index": "https://ftp.gnu.org/gnu/m4/",
-  "pattern": "m4-([0-9.]+)\.tar\.gz",
+  "pattern": "m4-([0-9.]+)\\.tar\\.gz",
   "url_template": "https://ftp.gnu.org/gnu/m4/{name}-{version}.tar.gz"
 }

@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://download.savannah.gnu.org/releases/lzip/",
+  "pattern": "lzip-([0-9.]+)\\.tar\\.gz",
+  "url_template": "https://download.savannah.gnu.org/releases/lzip/{name}-{version}.tar.gz"
+}

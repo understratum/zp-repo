@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+NAME=shadow
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+  --disable-static --enable-shadowgrp
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
+
+# passwd/su/login обязаны остаться setuid
+for f in passwd su login chsh chfn; do
+  [ -f "$DESTDIR/usr/bin/$f" ] && chmod u+s "$DESTDIR/usr/bin/$f"
+done

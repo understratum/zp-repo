@@ -1,6 +1,6 @@
 {
   "type": "listing",
   "index": "https://ftp.gnu.org/gnu/ncurses/",
-  "pattern": "ncurses-(\\d+\\.\\d+)\\.tar\\.gz",
+  "pattern": "ncurses-([0-9.]+)\\.tar\\.gz",
   "url_template": "https://ftp.gnu.org/gnu/ncurses/{name}-{version}.tar.gz"
 }

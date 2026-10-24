@@ -1,6 +1,6 @@
 {
   "type": "listing",
   "index": "https://ftp.gnu.org/gnu/bash/",
-  "pattern": "bash-([0-9.]+)\.tar\.gz",
+  "pattern": "bash-([0-9.]+)\\.tar\\.gz",
   "url_template": "https://ftp.gnu.org/gnu/bash/{name}-{version}.tar.gz"
 }

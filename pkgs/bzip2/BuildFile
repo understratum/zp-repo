@@ -1,0 +1,20 @@
+#!/bin/sh
+set -eu
+
+NAME=bzip2
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+make -f Makefile-libbz2_so -j"$JOBS"
+make -j"$JOBS"
+make install PREFIX=/usr DESTDIR="$DESTDIR"
+
+# make install ставит только libbz2.a; shared-либу — руками
+so="$(ls libbz2.so.* 2>/dev/null | head -1)"
+test -n "$so"
+install -Dm755 "$so" "$DESTDIR/usr/lib/$so"
+ln -sf "$so" "$DESTDIR/usr/lib/libbz2.so.1.0"
+ln -sf "$so" "$DESTDIR/usr/lib/libbz2.so"

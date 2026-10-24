@@ -1,0 +1,18 @@
+#!/bin/sh
+set -eu
+
+NAME=snappy
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+cmake -S . -B build \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_INSTALL_PREFIX=/usr \
+  -DSNAPPY_BUILD_TESTS=OFF \
+  -DSNAPPY_BUILD_BENCHMARKS=OFF
+
+cmake --build build -j"$JOBS"
+DESTDIR="$DESTDIR" cmake --install build

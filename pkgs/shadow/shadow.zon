@@ -1,0 +1,8 @@
+.{
+    .name = "shadow",
+    .version = "4.20.3",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/shadow-maint/shadow/releases/download/4.20.3/shadow-4.20.3.tar.xz",
+    .hash = "623be9429f64fa2165bfc5957c6a642ec309c5cf23c0d53855c99f7591922297",
+    .deps = .{},
+}

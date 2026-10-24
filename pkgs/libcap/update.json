@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/",
+  "pattern": "libcap-([0-9.]+)\\.tar\\.xz",
+  "url_template": "https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/{name}-{version}.tar.xz"
+}

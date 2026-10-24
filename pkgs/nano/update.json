@@ -1,6 +1,6 @@
 {
   "type": "listing",
-  "index": "https://www.nano-editor.org/dist/latest/",
-  "pattern": "nano-(\\d+\\.\\d+)\\.tar\\.xz",
-  "url_template": "https://www.nano-editor.org/dist/v{major}/{name}-{version}.tar.xz"
+  "index": "https://www.nano-editor.org/dist/v9/",
+  "pattern": "nano-([0-9.]+)\\.tar\\.xz",
+  "url_template": "https://www.nano-editor.org/dist/v9/{name}-{version}.tar.xz"
 }

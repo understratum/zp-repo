@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://ftp.gnu.org/gnu/gawk/",
+  "pattern": "gawk-([0-9.]+)\\.tar\\.xz",
+  "url_template": "https://ftp.gnu.org/gnu/gawk/{name}-{version}.tar.xz"
+}

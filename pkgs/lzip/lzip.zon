@@ -1,0 +1,8 @@
+.{
+    .name = "lzip",
+    .version = "1.26",
+    .license = "GPL-3.0-or-later",
+    .url = "https://download.savannah.gnu.org/releases/lzip/lzip-1.26.tar.gz",
+    .hash = "641cf30961525cbe3b340cc883436c8854e9f5032f459f444de4782b621e6572",
+    .deps = .{},
+}

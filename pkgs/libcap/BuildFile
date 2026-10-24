@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+
+NAME=libcap
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+make -j"$JOBS" prefix=/usr
+# RAISE_SETFCAP=no — иначе install зовёт setcap на файл внутри DESTDIR
+make install prefix=/usr RAISE_SETFCAP=no DESTDIR="$DESTDIR"

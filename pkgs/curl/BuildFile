@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+NAME=curl
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+  --with-openssl --with-zlib --enable-threaded-resolver --disable-static
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

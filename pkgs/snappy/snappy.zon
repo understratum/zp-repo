@@ -1,0 +1,8 @@
+.{
+    .name = "snappy",
+    .version = "1.3.0",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/google/snappy/archive/refs/tags/1.3.0.tar.gz",
+    .hash = "695d585b7679489a5dc9f5148a91781c8a14f4a9a5dbcdb5672ce0e761468b23",
+    .deps = .{},
+}
