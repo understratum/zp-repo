@@ -12,9 +12,9 @@ zp update bot.
 Запуск:  python3 scripts/update_bot.py [--dry-run]
 """
 
-import hashlib
-
 from __future__ import annotations
+
+import hashlib
 
 import argparse
 import json
