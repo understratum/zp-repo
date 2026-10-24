@@ -1,0 +1,7 @@
+.{
+    .name = "nano",
+    .version = "9.2",
+    .license = "GPL-3.0-or-later",
+    .url = "https://www.nano-editor.org/dist/v9/nano-9.2.tar.xz",
+    .deps = .{"ncurses"},
+}
