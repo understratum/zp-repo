@@ -1,0 +1,6 @@
+{
+  "type": "listing",
+  "index": "https://ftp.gnu.org/gnu/sed/",
+  "pattern": "sed-([0-9.]+)\\.tar\\.gz",
+  "url_template": "https://ftp.gnu.org/gnu/sed/{name}-{version}.tar.gz"
+}
