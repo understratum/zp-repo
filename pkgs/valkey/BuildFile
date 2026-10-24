@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+
+NAME=valkey
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+make -j"$JOBS" MALLOC=libc BUILD_TLS=no PREFIX=/usr
+make install PREFIX=/usr DESTDIR="$DESTDIR"
