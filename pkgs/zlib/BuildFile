@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+NAME=zlib
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
