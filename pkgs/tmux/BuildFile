@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+NAME=tmux
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure \
+    --prefix=/usr
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
