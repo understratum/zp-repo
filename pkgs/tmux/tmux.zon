@@ -1,0 +1,7 @@
+.{
+    .name = "tmux",
+    .version = "3.7c",
+    .license = "ISC",
+    .url = "https://github.com/tmux/tmux/releases/download/3.7c/tmux-3.7c.tar.gz",
+    .deps = .{ "libevent", "ncurses" },
+}
