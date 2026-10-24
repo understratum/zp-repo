@@ -1,0 +1,31 @@
+#!/bin/sh
+set -eu
+
+NAME=ncurses
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure \
+    --prefix=/usr \
+    --mandir=/usr/share/man \
+    --with-shared \
+    --without-debug \
+    --without-normal \
+    --without-cxx-binding \
+    --without-ada \
+    --enable-pc-files \
+    --with-pkg-config-libdir=/usr/lib/pkgconfig \
+    --enable-widec \
+    --enable-overwrite
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
+
+for lib in ncurses form panel menu; do
+    ln -sf "lib${lib}w.so" "$DESTDIR/usr/lib/lib${lib}.so"
+    ln -sf "${lib}w.pc" "$DESTDIR/usr/lib/pkgconfig/${lib}.pc"
+done
+ln -sf libncursesw.so "$DESTDIR/usr/lib/libcurses.so"
