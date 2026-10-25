@@ -1,7 +1,3 @@
 {
-  "type": "listing",
-  "channel": "1",
-  "index": "https://www.memcached.org/files/",
-  "pattern": "memcached-([0-9.]+)[.]tar[.]gz",
-  "url_template": "https://www.memcached.org/files/{name}-{version}.tar.gz"
+  "type": "none"
 }

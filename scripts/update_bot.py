@@ -32,6 +32,11 @@ GITHUB_RELEASE_URL_RE = re.compile(
     r"(?P<tag>[^/]+)(?P<asset>/.*)$"
 )
 
+GITHUB_ARCHIVE_URL_RE = re.compile(
+    r"^(?P<base>https://github\.com/(?P<owner>[^/]+)/(?P<repo>[^/]+)/archive/refs/tags/)"
+    r"(?P<tag>[^/]+)\.tar\.gz$"
+)
+
 def compute_sha256(url: str) -> str:
     """Качает файл по частям и возвращает sha256 hexdigest.
 
@@ -181,8 +186,11 @@ def latest_github_tag(owner: str, repo: str) -> str:
 
 def resolve_github(cur_version: str, cur_url: str):
     m = GITHUB_RELEASE_URL_RE.match(cur_url)
-    if not m:
-        raise UpstreamError(f"URL не похож на GitHub Releases: {cur_url}")
+    is_archive = m is None
+    if is_archive:
+        m = GITHUB_ARCHIVE_URL_RE.match(cur_url)
+    if m is None:
+        raise UpstreamError(f"URL не похож на GitHub Releases или archive tag: {cur_url}")
 
     owner, repo = m.group("owner"), m.group("repo")
     cur_tag = m.group("tag")
@@ -207,14 +215,17 @@ def resolve_github(cur_version: str, cur_url: str):
         new_version = new_tag
 
     # пересобираем URL: сначала тег в пути, потом версия в имени архива
-    asset = m.group("asset")
-    if cur_tag in asset:
-        asset = asset.replace(cur_tag, new_tag)
-    if cur_version in asset:
-        asset = asset.replace(cur_version, new_version)
+    if is_archive:
+        new_url = m.group("base") + new_tag + ".tar.gz"
+    else:
+        asset = m.group("asset")
+        if cur_tag in asset:
+            asset = asset.replace(cur_tag, new_tag)
+        if cur_version in asset:
+            asset = asset.replace(cur_version, new_version)
+        new_url = m.group("base") + new_tag + asset
 
-    return new_version, m.group("base") + new_tag + asset
-
+    return new_version, new_url 
 
 def resolve_listing(cfg: dict, name: str, cur_version: str, cur_url: str):
     index = cfg.get("index")

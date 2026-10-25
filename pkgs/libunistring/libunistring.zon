@@ -1,8 +1,8 @@
 .{
     .name = "libunistring",
-    .version = "1.4.1",
+    .version = "1.5",
     .license = "LGPL-3.0-or-later",
-    .url = "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.1.tar.gz",
-    .hash = "12542ad7619470efd95a623174dcd4b364f2483caf708c6bee837cb53a54cb9d",
+    .url = "https://ftp.gnu.org/gnu/libunistring/libunistring-1.5.tar.gz",
+    .hash = "5b0ecd46cbf225375f20ab4056197e66a7ac590e2684c069af407ae3383c9d81",
     .deps = .{},
 }
