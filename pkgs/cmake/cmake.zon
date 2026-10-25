@@ -1,0 +1,8 @@
+.{
+    .name = "cmake",
+    .version = "4.4.4",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4.tar.gz",
+    .hash = "bd24c30d80a7744ae84b845ff080cc8453b06c622ef01066564108e9cefc44cf",
+    .deps = .{},
+}

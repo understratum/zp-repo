@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+NAME=c-ares
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+cmake -S . -B build \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_INSTALL_PREFIX=/usr \
+  -DCARES_BUILD_TOOLS=ON \
+  -DCARES_STATIC=OFF \
+  -DCARES_SHARED=ON
+
+cmake --build build -j"$JOBS"
+DESTDIR="$DESTDIR" cmake --install build

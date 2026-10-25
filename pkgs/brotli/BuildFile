@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+NAME=brotli
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+cmake -S . -B build \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_INSTALL_PREFIX=/usr \
+  -DBROTLI_DISABLE_TESTS=ON
+
+cmake --build build -j"$JOBS"
+DESTDIR="$DESTDIR" cmake --install build

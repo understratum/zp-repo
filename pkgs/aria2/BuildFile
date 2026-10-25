@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+NAME=aria2
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+  --with-openssl --with-sqlite3 --disable-openssl-session-cache
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

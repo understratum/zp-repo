@@ -1,0 +1,8 @@
+.{
+    .name = "nghttp2",
+    .version = "1.70.0",
+    .license = "MIT",
+    .url = "https://github.com/nghttp2/nghttp2/releases/download/v1.70.0/nghttp2-1.70.0.tar.xz",
+    .hash = "e05cb1388eaca3830aded4ccf20044b6e1ac1a61411dcca11b0437c4285c8bc2",
+    .deps = .{"openssl", "zlib", "c-ares"},
+}

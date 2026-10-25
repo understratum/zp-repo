@@ -1,0 +1,8 @@
+.{
+    .name = "minisign",
+    .version = "0.12",
+    .license = "MIT",
+    .url = "https://github.com/jedisct1/minisign/archive/refs/tags/0.12.tar.gz",
+    .hash = "796dce1376f9bcb1a19ece729c075c47054364355fe0c0c1ebe5104d508c7db0",
+    .deps = .{"openssl"},
+}

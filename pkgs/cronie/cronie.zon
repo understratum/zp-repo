@@ -1,0 +1,8 @@
+.{
+    .name = "cronie",
+    .version = "1.7.2",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/cronie-crond/cronie/releases/download/cronie-1.7.2/cronie-1.7.2.tar.gz",
+    .hash = "f1da374a15ba7605cf378347f96bc8b678d3d7c0765269c8242cfe5b0789c571",
+    .deps = .{},
+}

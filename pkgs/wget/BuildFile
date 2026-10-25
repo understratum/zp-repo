@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+NAME=wget
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+  --with-ssl=openssl --with-libidn2 --enable-iri --disable-debug
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

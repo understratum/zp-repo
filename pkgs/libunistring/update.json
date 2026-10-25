@@ -1,0 +1,7 @@
+{
+  "type": "listing",
+  "channel": "1",
+  "index": "https://ftp.gnu.org/gnu/libunistring/",
+  "pattern": "libunistring-([0-9.]+)[.]tar[.]gz",
+  "url_template": "https://ftp.gnu.org/gnu/libunistring/{name}-{version}.tar.gz"
+}

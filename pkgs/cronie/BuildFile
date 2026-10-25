@@ -1,0 +1,20 @@
+#!/bin/sh
+set -eu
+
+NAME=cronie
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/spool \
+  --sbindir=/usr/bin --disable-selinux
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
+
+# crontab обязан быть setgid, иначе правка crontab не работает
+if [ -f "$DESTDIR/usr/bin/crontab" ]; then
+  chmod 2755 "$DESTDIR/usr/bin/crontab"
+fi

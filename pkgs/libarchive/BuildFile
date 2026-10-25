@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+NAME=libarchive
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+  --with-zlib --with-bz2lib --with-lzma --with-zstd --with-lz4 \
+  --without-nettle --without-openssl --disable-static
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

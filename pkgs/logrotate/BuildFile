@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+NAME=logrotate
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/lib
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

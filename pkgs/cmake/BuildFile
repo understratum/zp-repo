@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+NAME=cmake
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./bootstrap --prefix=/usr --parallel="$JOBS" -- \
+  -DCMAKE_USE_OPENSSL=OFF \
+  -DBUILD_CursesDialog=OFF
+
+make -j"$JOBS"
+make install DESTDIR="$DESTDIR"

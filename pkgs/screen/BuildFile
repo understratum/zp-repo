@@ -1,0 +1,20 @@
+#!/bin/sh
+set -eu
+
+NAME=screen
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var/run \
+  --enable-colors256 --enable-telnet
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
+
+# screen исторически требует setuid для записи utmp; проверяем после install
+if [ -f "$DESTDIR/usr/bin/screen" ]; then
+  chmod 4755 "$DESTDIR/usr/bin/screen"
+fi

@@ -1,0 +1,8 @@
+.{
+    .name = "libpcap",
+    .version = "1.10.5",
+    .license = "BSD-3-Clause",
+    .url = "https://www.tcpdump.org/release/libpcap-1.10.5.tar.gz",
+    .hash = "37ced90a19a302a7f32e458224a00c365c117905c2cd35ac544b6880a81488f0",
+    .deps = .{},
+}

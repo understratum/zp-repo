@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+
+NAME=minisign
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+make -j"$JOBS" -C src PREFIX=/usr
+make install -C src PREFIX=/usr DESTDIR="$DESTDIR"

@@ -1,0 +1,7 @@
+{
+  "type": "listing",
+  "channel": "2",
+  "index": "https://ftp.gnu.org/gnu/libidn/",
+  "pattern": "libidn2-([0-9.]+)[.]tar[.]gz",
+  "url_template": "https://ftp.gnu.org/gnu/libidn/{name}-{version}.tar.gz"
+}

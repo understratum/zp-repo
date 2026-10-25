@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+NAME=libpcap
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+  --with-pcap=linux --disable-usb --disable-dbus --disable-netfilter --disable-rdma
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
