@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+NAME=sqlite
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --enable-readline \
+  --enable-fts5 \
+  --disable-static
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
