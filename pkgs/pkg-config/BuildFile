@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+NAME=pkg-config
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+# --with-internal-glib: не тянуть glib; --disable-host-tool: не ставить кросс-вариант
+./configure --prefix=/usr --with-internal-glib --disable-host-tool
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

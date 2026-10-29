@@ -1,0 +1,7 @@
+{
+  "type": "listing",
+  "channel": "7",
+  "index": "https://ftp.gnu.org/gnu/texinfo/",
+  "pattern": "texinfo-([0-9.]+)[.]tar[.]xz",
+  "url_template": "https://ftp.gnu.org/gnu/texinfo/{name}-{version}.tar.xz"
+}

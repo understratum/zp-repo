@@ -1,0 +1,36 @@
+#!/bin/sh
+set -eu
+
+NAME=llvm
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+case "$(uname -m)" in
+  x86_64|i?86)   LLVM_TARGETS="X86" ;;
+  aarch64|arm64) LLVM_TARGETS="AArch64" ;;
+  riscv64)     LLVM_TARGETS="RISCV" ;;
+  *)           LLVM_TARGETS="all" ;;
+esac
+
+# -S llvm: корень tarball содержит llvm/ clang/ lld/, а не CMakeLists.txt
+# LLVM_LINK_LLVM_DYLIB=ON: одна libLLVM.so вместо ~1.5 GB статических .a
+# LLVM_ENABLE_LIBXML2=OFF: libxml2 опционален и нужен только для llvm-mt/XML-отчётов
+cmake -S llvm -B build -G Ninja \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_INSTALL_PREFIX=/usr \
+  -DLLVM_ENABLE_PROJECTS="clang;lld" \
+  -DLLVM_TARGETS_TO_BUILD="$LLVM_TARGETS" \
+  -DLLVM_LINK_LLVM_DYLIB=ON \
+  -DLLVM_ENABLE_RTTI=ON \
+  -DLLVM_INCLUDE_TESTS=OFF \
+  -DLLVM_INCLUDE_BENCHMARKS=OFF \
+  -DLLVM_INCLUDE_EXAMPLES=OFF \
+  -DLLVM_ENABLE_ZLIB=ON \
+  -DLLVM_ENABLE_ZSTD=ON \
+  -DLLVM_ENABLE_LIBXML2=OFF
+
+cmake --build build -j"$JOBS"
+DESTDIR="$DESTDIR" cmake --install build

@@ -1,0 +1,7 @@
+{
+  "type": "listing",
+  "channel": "4",
+  "index": "https://ftp.gnu.org/gnu/mpfr/",
+  "pattern": "mpfr-([0-9.]+)[.]tar[.]xz",
+  "url_template": "https://ftp.gnu.org/gnu/mpfr/{name}-{version}.tar.xz"
+}

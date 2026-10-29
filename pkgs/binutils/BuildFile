@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+NAME=binutils
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+# ВНИМАНИЕ: --program-suffix обязателен. Без него zp add binutils перезапишет
+# хостовые /usr/bin/ld и /usr/bin/as, и zp remove binutils оставит систему
+# без линковщика. Для stage-3 бутстрапа суффикс убрать.
+mkdir -p b && cd b
+
+../configure --prefix=/usr \
+  --enable-64-bit-bfd \
+  --disable-nls \
+  --with-system-zlib \
+  --program-suffix=-2.47
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install

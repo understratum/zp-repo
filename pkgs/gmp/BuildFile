@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+
+NAME=gmp
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./configure --prefix=/usr --enable-cxx --disable-static
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
