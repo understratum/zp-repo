@@ -8,6 +8,12 @@ JOBS="$(nproc)"
 
 cd "$SRC"
 
-./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+./configure --prefix=/usr \
+  --enable-shared \
+  --disable-static
+
 make -j"$JOBS"
 make DESTDIR="$DESTDIR" install
+
+find "$DESTDIR" -name '*.la' -delete
+find "$DESTDIR" -type l -delete
