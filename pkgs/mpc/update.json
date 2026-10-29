@@ -1,7 +1,0 @@
-{
-  "type": "listing",
-  "channel": "1",
-  "index": "https://ftp.gnu.org/gnu/mpc/",
-  "pattern": "mpc-([0-9.]+)[.]tar[.]xz",
-  "url_template": "https://ftp.gnu.org/gnu/mpc/{name}-{version}.tar.gz"
-}

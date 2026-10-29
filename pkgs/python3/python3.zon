@@ -1,8 +1,0 @@
-.{
-    .name = "python3",
-    .version = "3.14.10",
-    .license = "Python-2.0",
-    .url = "https://www.python.org/ftp/python/3.14.10/Python-3.14.10.tar.xz",
-    .hash = "de414a57119abef52784d8993e341d53aed635fc2b05c2607d9f98a2c5b72032",
-    .deps = .{"zlib", "libffi", "ncurses", "readline", "openssl", "sqlite", "bzip2", "xz"},
-}

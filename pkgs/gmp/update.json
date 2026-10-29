@@ -1,7 +1,0 @@
-{
-  "type": "listing",
-  "channel": "6",
-  "index": "https://ftp.gnu.org/gnu/gmp/",
-  "pattern": "gmp-([0-9.]+)[.]tar[.]xz",
-  "url_template": "https://ftp.gnu.org/gnu/gmp/{name}-{version}.tar.xz"
-}

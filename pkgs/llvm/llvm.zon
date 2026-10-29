@@ -1,8 +1,0 @@
-.{
-    .name = "llvm",
-    .version = "23.1.4",
-    .license = "Apache-2.0 WITH LLVM-exception",
-    .url = "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.4/llvm-project-23.1.4.src.tar.xz",
-    .hash = "819ecf7351f1a66f76b2d701d8942faaf5faeb324cb90c9d5b090de142434bb2",
-    .deps = .{"cmake", "ninja", "zlib", "zstd", "libffi", "ncurses"},
-}

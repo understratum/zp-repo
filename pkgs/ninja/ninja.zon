@@ -1,8 +1,0 @@
-.{
-    .name = "ninja",
-    .version = "1.13.1",
-    .license = "Apache-2.0",
-    .url = "https://github.com/ninja-build/ninja/archive/refs/tags/v1.13.1.tar.gz",
-    .hash = "f0055ad0369bf2e372955ba55128d000cfcc21777057806015b45e4accbebf23",
-    .deps = .{"cmake"},
-}
