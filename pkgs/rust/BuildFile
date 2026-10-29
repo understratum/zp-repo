@@ -1,0 +1,55 @@
+#!/bin/sh
+set -eu
+
+NAME=rust
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+case "$(uname -m)" in
+  x86_64|i?86)   LLVM_TARGETS="X86" ;;
+  aarch64|arm64) LLVM_TARGETS="AArch64" ;;
+  riscv64)     LLVM_TARGETS="RISCV" ;;
+  *)           LLVM_TARGETS="all" ;;
+esac
+
+# НЕГЕРМЕТИЧНО: bootstrap скачает stage0-компилятор со static.rust-lang.org
+# во время сборки. sha256 в .zon покрывает только src-тарболл, НЕ stage0.
+# Если на хосте уже есть rustc >= предыдущей стабильной — можно указать его
+# в [build] cargo/rustc и избежать загрузки.
+#
+# vendor = true       -> крейты из tarball, crates.io не дёргается
+# download-ci-llvm = false -> LLVM собирается из входящего в tarball исходника
+#                             (иначе качается прекомпиленный, и версия не
+#                              совпадёт с системным llvm 23)
+RUSTC_HOST="$(command -v rustc || true)"
+
+cat > bootstrap.toml <<TOML
+[llvm]
+download-ci-llvm = false
+targets = "$LLVM_TARGETS"
+
+[build]
+extended = true
+tools = ["cargo", "rustdoc", "clippy", "rustfmt", "analysis", "src"]
+vendor = true
+locked-deps = true
+python = "python3"
+
+[install]
+prefix = "/usr"
+sysconfdir = "/etc"
+libdir = "/usr/lib"
+
+[rust]
+channel = "stable"
+debuginfo-level = 0
+debuginfo-level-std = 0
+incremental = false
+codegen-tests = false
+TOML
+
+./x.py build --stage 2 -j "$JOBS"
+DESTDIR="$DESTDIR" ./x.py install --stage 2

@@ -1,0 +1,7 @@
+{
+  "type": "listing",
+  "channel": "0",
+  "index": "https://pkgconfig.freedesktop.org/releases/",
+  "pattern": "pkg-config-([0-9.]+)[.]tar[.]gz",
+  "url_template": "https://pkgconfig.freedesktop.org/releases/{name}-{version}.tar.gz"
+}

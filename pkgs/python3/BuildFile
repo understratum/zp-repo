@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+NAME=python3
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+# --enable-optimizations (PGO) удлинняет сборку втрое — включай осознанно
+./configure --prefix=/usr \
+  --enable-shared \
+  --with-ensurepip=install \
+  --with-system-ffi \
+  --with-system-libmpdec
+
+make -j"$JOBS"
+make DESTDIR="$DESTDIR" install
