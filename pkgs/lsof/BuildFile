@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+NAME=lsof
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+./Configure -n linux
+
+make -j"$JOBS"
+
+install -D -m 755 lsof "$DESTDIR/usr/bin/lsof"
+install -D -m 644 Lsof.8 "$DESTDIR/usr/share/man/man8/lsof.8"
