@@ -1,0 +1,8 @@
+.{
+    .name = "cloc",
+    .version = "2.10",
+    .license = "GPL-2.0-or-later",
+    .url = "https://github.com/AlDanial/cloc/archive/refs/tags/v2.10.tar.gz",
+    .hash = "a8fac35f4cf42728765580ba11afc2568ad205509a22204663f526169548436d",
+    .deps = .{},
+}
