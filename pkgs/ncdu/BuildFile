@@ -1,0 +1,18 @@
+#!/bin/sh
+set -eu
+
+NAME=ncdu
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+JOBS="$(nproc)"
+
+cd "$SRC"
+
+if command -v zig >/dev/null 2>&1 && [ -f build.zig ]; then
+    zig build --prefix "$DESTDIR/usr" --release=safe
+else
+    # fallback для ncdu 1.x (C-версия)
+    ./configure --prefix=/usr
+    make -j"$JOBS"
+    make DESTDIR="$DESTDIR" install
+fi
