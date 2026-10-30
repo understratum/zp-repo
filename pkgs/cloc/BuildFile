@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+NAME=cloc
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+
+cd "$SRC"
+
+# cloc — это Perl-скрипт, просто копируем в /usr/bin
+install -D -m 755 cloc "$DESTDIR/usr/bin/cloc"
+
+# документация (опционально)
+if [ -f README.md ]; then
+    install -D -m 644 README.md "$DESTDIR/usr/share/doc/cloc/README.md"
+fi
