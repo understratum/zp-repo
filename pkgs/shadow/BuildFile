@@ -9,7 +9,7 @@ JOBS="$(nproc)"
 cd "$SRC"
 
 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-  --disable-static --enable-shadowgrp
+  --disable-static --enable-shadowgrp --disable-logind
 make -j"$JOBS"
 make DESTDIR="$DESTDIR" install
 
