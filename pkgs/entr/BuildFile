@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+NAME=entr
+SRC="/var/zp/build/$NAME"
+DESTDIR="/var/zp/pkg/$NAME"
+cd "$SRC"
+make -j"$(nproc)"
+install -D -m 755 entr "$DESTDIR/usr/bin/entr"
+install -D -m 644 entr.1 "$DESTDIR/usr/share/man/man1/entr.1"

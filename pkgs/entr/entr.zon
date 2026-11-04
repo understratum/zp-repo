@@ -1,0 +1,8 @@
+.{
+    .name = "entr",
+    .version = "5.9",
+    .license = "ISC",
+    .url = "https://eradman.com/entrproject/code/entr-5.9.tar.gz",
+    .hash = "0ef2ce7db728167844a91904944cd07c7ccc6fd3041b849cad861224d106a845",
+    .deps = .{},
+}

@@ -1,0 +1,8 @@
+.{
+    .name = "psmisc",
+    .version = "23.7",
+    .license = "GPL-2.0-or-later",
+    .url = "https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz/download",
+    .hash = "58c55d9c1402474065adae669511c191de374b0871eec781239ab400b907c327",
+    .deps = .{},
+}
