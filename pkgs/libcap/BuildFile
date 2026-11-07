@@ -2,8 +2,8 @@
 set -eu
 
 NAME=libcap
-SRC="/var/zp/build/$NAME"
-DESTDIR="/var/zp/pkg/$NAME"
+SRC="$ZP_BUILD_DIR/$NAME"
+DESTDIR="$ZP_PKG_DIR/$NAME"
 JOBS="$(nproc)"
 
 cd "$SRC"

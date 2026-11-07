@@ -1,8 +1,8 @@
 #!/bin/sh
 set -eu
 NAME=psmisc
-SRC="/var/zp/build/$NAME"
-DESTDIR="/var/zp/pkg/$NAME"
+SRC="$ZP_BUILD_DIR/$NAME"
+DESTDIR="$ZP_PKG_DIR/$NAME"
 cd "$SRC"
 # sourceforge-tarball имеет configure; guard на случай archive без него
 [ -x ./configure ] || autoreconf -fi

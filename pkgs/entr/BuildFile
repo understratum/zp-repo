@@ -1,8 +1,8 @@
 #!/bin/sh
 set -eu
 NAME=entr
-SRC="/var/zp/build/$NAME"
-DESTDIR="/var/zp/pkg/$NAME"
+SRC="$ZP_BUILD_DIR/$NAME"
+DESTDIR="$ZP_PKG_DIR/$NAME"
 cd "$SRC"
 make -j"$(nproc)"
 install -D -m 755 entr "$DESTDIR/usr/bin/entr"

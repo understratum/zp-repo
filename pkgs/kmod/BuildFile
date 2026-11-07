@@ -1,8 +1,8 @@
 #!/bin/sh
 set -eu
 NAME=kmod
-SRC="/var/zp/build/$NAME"
-DESTDIR="/var/zp/pkg/$NAME"
+SRC="$ZP_BUILD_DIR/$NAME"
+DESTDIR="$ZP_PKG_DIR/$NAME"
 cd "$SRC"
 # если meson ругнётся на неизвестную опцию — убери её строку
 meson setup build --prefix=/usr \
