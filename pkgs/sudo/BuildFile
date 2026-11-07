@@ -5,9 +5,9 @@ cd "$ZP_SRC_DIR"
     --prefix=/usr \
     --sysconfdir=/etc \
     --with-rundir=/run/sudo \
+    --without-ssl \
     --without-selinux --without-apparmor \
     --without-ldap --without-afs --without-samba \
-    --with-all-insults \
     --disable-lecture --disable-root-mailer
 make -j"$ZP_JOBS"
 make DESTDIR="$ZP_DESTDIR" install
