@@ -1,7 +1,15 @@
 #!/bin/sh
 set -eu
 cd "$ZP_SRC_DIR"
-meson setup build --prefix=/usr -Dpam=false 2>/dev/null \
-    || meson setup build --prefix=/usr
-meson compile -C build -j"$ZP_JOBS"
-meson install -C build --destdir "$ZP_DESTDIR"
+
+pam_flag=""
+help_out="$(./configure --help 2>&1 || true)"
+case "$help_out" in
+    *without-pam*) pam_flag="--without-pam" ;;
+    *disable-pam*) pam_flag="--disable-pam" ;;
+esac
+echo "doas-musl: pam_flag='${pam_flag:-<нет>}'"
+
+./configure --prefix=/usr --sysconfdir=/etc $pam_flag
+make -j"$ZP_JOBS"
+make install DESTDIR="$ZP_DESTDIR"
