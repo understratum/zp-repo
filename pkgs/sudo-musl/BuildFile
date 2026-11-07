@@ -16,11 +16,8 @@ curl -fsSL "$api" \
     done
 
 ./configure \
-    --prefix=/usr \
-    --sysconfdir=/etc \
-    --with-rundir=/run/sudo \
-    --without-ssl \
-    --without-pam \
+    --prefix=/usr --sysconfdir=/etc --with-rundir=/run/sudo \
+    --disable-openssl --without-pam \
     --without-selinux --without-apparmor \
     --without-ldap --without-afs --without-samba \
     --disable-lecture --disable-root-mailer
