@@ -1,0 +1,8 @@
+.{
+    .name = "delta",
+    .version = "0.20.1",
+    .license = "MIT",
+    .url = "https://github.com/dandavison/delta/archive/refs/tags/0.20.1.tar.gz",
+    .hash = "d9d502396e3595ee8fd926f1ed2e54ac9935baabd3569a3753efab36304f90fa",
+    .deps = .{"git", "ripgrep"},
+}

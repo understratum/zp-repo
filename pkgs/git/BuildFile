@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+./configure --prefix=/usr \
+    --with-expat --with-curl --with-openssl --with-zlib \
+    --without-tcltk --without-python
+make -j"$ZP_JOBS" NO_PERL=YesPlease NO_PYTHON=NoPlease \
+    NO_TCLTK=NoPlease NO_GETTEXT=YesPlease
+make install prefix=/usr DESTDIR="$ZP_DESTDIR" \
+    NO_PERL=YesPlease NO_GETTEXT=YesPlease

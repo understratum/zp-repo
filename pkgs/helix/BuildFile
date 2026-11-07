@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --workspace
+install -Dm755 target/release/hx "$ZP_DESTDIR/usr/bin/hx"
+RT="$ZP_DESTDIR/usr/lib/helix/runtime"
+mkdir -p "$RT"
+cp -r runtime/. "$RT/"

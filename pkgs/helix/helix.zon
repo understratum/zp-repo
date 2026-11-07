@@ -1,0 +1,8 @@
+.{
+    .name = "helix",
+    .version = "25.07.1",
+    .license = "MPL-2.0",
+    .url = "https://github.com/helix-editor/helix/archive/refs/tags/25.07.1.tar.gz",
+    .hash = "27c8bc3eba46bc7bab1e3629c6b28ff94882eeff17366b3ea69cd8ceffba7541",
+    .deps = .{},
+}

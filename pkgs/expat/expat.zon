@@ -1,0 +1,8 @@
+.{
+    .name = "expat",
+    .version = "2.10.0",
+    .license = "MIT",
+    .url = "https://github.com/libexpat/libexpat/releases/download/R_2_10_0/expat-2.10.0.tar.gz",
+    .hash = "5466a341f9c692ef7a958a6881311be597f8e1ce345984cf78414f54793dea4c",
+    .deps = .{},
+}

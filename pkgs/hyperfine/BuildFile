@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release
+install -Dm755 target/release/hyperfine "$ZP_DESTDIR/usr/bin/hyperfine"

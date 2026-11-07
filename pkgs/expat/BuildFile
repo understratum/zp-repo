@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+./configure --prefix=/usr
+make -j"$ZP_JOBS"
+make DESTDIR="$ZP_DESTDIR" install
