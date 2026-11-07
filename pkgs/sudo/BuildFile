@@ -2,10 +2,8 @@
 set -eu
 cd "$ZP_SRC_DIR"
 ./configure \
-    --prefix=/usr \
-    --sysconfdir=/etc \
-    --with-rundir=/run/sudo \
-    --without-ssl \
+    --prefix=/usr --sysconfdir=/etc --with-rundir=/run/sudo \
+    --disable-openssl \
     --without-selinux --without-apparmor \
     --without-ldap --without-afs --without-samba \
     --disable-lecture --disable-root-mailer
