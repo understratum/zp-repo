@@ -1,0 +1,31 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+
+# musl-патчи держит Alpine (upstream sudo не даёт LTS).
+# ВРЕМЕННАЯ МЕРА: fetch на лету. Когда в zp появится .patches + fetch-фаза —
+# вынести патчи в репу, network-in-BuildFile ломает воспроизводимость.
+api="https://api.github.com/repos/alpinelinux/aports/contents/main/sudo"
+curl -fsSL "$api" \
+  | grep -o '"name": *"[^"]*\.patch"' \
+  | sed 's/.*"\([^"]*\.patch\)"/\1/' \
+  | while read -r p; do
+        curl -fsSL "https://raw.githubusercontent.com/alpinelinux/aports/master/main/sudo/$p" -o "/tmp/$p" || continue
+        if patch -p1 --dry-run < "/tmp/$p" >/dev/null 2>&1; then
+            patch -p1 < "/tmp/$p" && echo "applied: $p"
+        else
+            echo "skip: $p"
+        fi
+    done
+
+./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc \
+    --with-rundir=/run/sudo \
+    --without-pam \
+    --without-selinux --without-apparmor \
+    --without-ldap --without-afs --without-samba \
+    --with-all-insults \
+    --disable-lecture --disable-root-mailer
+make -j"$ZP_JOBS"
+make DESTDIR="$ZP_DESTDIR" install
