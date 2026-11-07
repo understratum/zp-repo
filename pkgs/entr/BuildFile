@@ -3,7 +3,6 @@ set -eu
 NAME=entr
 SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
-cd "$SRC"
-make -j"$(nproc)"
+make -j"$ZP_JOBS"
 install -D -m 755 entr "$DESTDIR/usr/bin/entr"
 install -D -m 644 entr.1 "$DESTDIR/usr/share/man/man1/entr.1"

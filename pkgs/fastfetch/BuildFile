@@ -3,7 +3,6 @@ set -eu
 NAME=fastfetch
 SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
-cd "$SRC"
 cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
-cmake --build build -j"$(nproc)"
+cmake --build build -j"$ZP_JOBS"
 DESTDIR="$DESTDIR" cmake --install build

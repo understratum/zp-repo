@@ -3,7 +3,6 @@ set -eu
 NAME=rsync
 SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
-cd "$SRC"
 # GitHub-archive = git-дерево: configure не сгенерирован
 if [ ! -x ./configure ]; then
     if [ -x ./prepare-source ]; then
@@ -13,5 +12,5 @@ if [ ! -x ./configure ]; then
     fi
 fi
 ./configure --prefix=/usr
-make -j"$(nproc)"
+make -j"$ZP_JOBS"
 make DESTDIR="$DESTDIR" install

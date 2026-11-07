@@ -6,7 +6,6 @@ SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
 JOBS="$(nproc)"
 
-cd "$SRC"
 
 ./bootstrap --prefix=/usr --parallel="$JOBS" -- \
   -DCMAKE_USE_OPENSSL=OFF \

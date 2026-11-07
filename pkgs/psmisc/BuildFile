@@ -3,9 +3,8 @@ set -eu
 NAME=psmisc
 SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
-cd "$SRC"
 # sourceforge-tarball имеет configure; guard на случай archive без него
 [ -x ./configure ] || autoreconf -fi
 ./configure --prefix=/usr
-make -j"$(nproc)"
+make -j"$ZP_JOBS"
 make DESTDIR="$DESTDIR" install

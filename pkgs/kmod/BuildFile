@@ -3,7 +3,6 @@ set -eu
 NAME=kmod
 SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
-cd "$SRC"
 # если meson ругнётся на неизвестную опцию — убери её строку
 meson setup build --prefix=/usr \
   -Dzlib=enabled -Dxz=enabled \

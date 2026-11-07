@@ -3,12 +3,11 @@ set -eu
 NAME=busybox
 SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
-cd "$SRC"
 
 make defconfig
 # статическая линковка — musl любит, applet'ы автономны, boot быстрее
 sed -i 's/# CONFIG_STATIC is not set/CONFIG_STATIC=y/' .config
 
-make -j"$(nproc)"
+make -j"$ZP_JOBS"
 # busybox сам создаёт бинарник + ВСЕ симлинки applet'ов в $DESTDIR/usr
 make CONFIG_PREFIX="$DESTDIR/usr" install

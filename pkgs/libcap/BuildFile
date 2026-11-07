@@ -6,7 +6,6 @@ SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
 JOBS="$(nproc)"
 
-cd "$SRC"
 
 make -j"$JOBS" prefix=/usr
 # RAISE_SETFCAP=no — иначе install зовёт setcap на файл внутри DESTDIR

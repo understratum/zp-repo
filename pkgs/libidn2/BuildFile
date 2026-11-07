@@ -6,7 +6,6 @@ SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
 JOBS="$(nproc)"
 
-cd "$SRC"
 
 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
 make -j"$JOBS"

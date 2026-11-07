@@ -6,7 +6,6 @@ SRC="$ZP_BUILD_DIR/$NAME"
 DESTDIR="$ZP_PKG_DIR/$NAME"
 JOBS="$(nproc)"
 
-cd "$SRC"
 
 # ВНИМАНИЕ: --program-suffix=-16 ставит /usr/bin/gcc-16 и /usr/bin/g++-16,
 # НЕ трогая хостовый gcc. Внутренности версионные (/usr/lib/gcc/<triplet>/16.2.0/),
