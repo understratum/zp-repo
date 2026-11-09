@@ -8,6 +8,6 @@ JOBS="$(nproc)"
 
 
 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-  --with-openssl --with-zlib --enable-threaded-resolver --disable-static
+  --with-openssl --with-zlib --enable-threaded-resolver --disable-static --without-libpsl
 make -j"$JOBS"
 make DESTDIR="$DESTDIR" install
