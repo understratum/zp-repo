@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+# GitHub-архив postgres НЕ содержит configure (генерируется autoconf),
+# поэтому исходник с ftp.postgresql.org, а версия — из GitHub-тега.
+# ICU и readline отключены: иначе нужны пакеты icu и readline.
+./configure --prefix=/usr \
+    --with-openssl --with-zstd \
+    --without-icu --without-readline \
+    --without-lz4
+make -j"$ZP_JOBS"
+make DESTDIR="$ZP_DESTDIR" install

@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+# configure у FFmpeg рукописный и лежит в git — GitHub-архив подходит.
+# --disable-x86asm: без nasm. Хочешь ассемблерные оптимизации —
+# добавь пакет nasm и убери этот флаг (заметный прирост скорости).
+./configure --prefix=/usr \
+    --enable-shared --disable-static \
+    --enable-gpl \
+    --disable-x86asm \
+    --disable-doc
+make -j"$ZP_JOBS"
+make DESTDIR="$ZP_DESTDIR" install

@@ -1,0 +1,8 @@
+.{
+    .name = "opencv",
+    .version = "5.1.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/opencv/opencv/archive/refs/tags/5.1.0.tar.gz",
+    .hash = "638c1dae7e37e45afea21aa217dc667ad7cf57acc66cdf652c074f1e0e5ad6d2",
+    .deps = .{"cmake", "ninja", "zlib"},
+}

@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+# BUILD_LIST ограничивает модули: core+imgproc+imgcodecs собираются ~15 мин.
+# Хочешь полный набор (dnn, features2d, calib3d, videoio...) — закомментируй
+# BUILD_LIST и WITH_PROTOBUF, получишь сборку на 1-2 часа.
+cmake -B build -G Ninja \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DBUILD_SHARED_LIBS=ON \
+    -DBUILD_LIST=core,imgproc,imgcodecs \
+    -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF \
+    -DBUILD_EXAMPLES=OFF -DBUILD_DOCS=OFF \
+    -DBUILD_opencv_apps=OFF \
+    -DWITH_IPP=OFF -DWITH_PROTOBUF=OFF
+cmake --build build -j"$ZP_JOBS"
+DESTDIR="$ZP_DESTDIR" cmake --install build
