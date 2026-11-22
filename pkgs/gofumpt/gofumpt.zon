@@ -1,0 +1,8 @@
+.{
+    .name = "gofumpt",
+    .version = "0.12.0",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/mvdan/gofumpt/archive/refs/tags/v0.12.0.tar.gz",
+    .hash = "b6d5d14692cad23996da4329bf24d30324af30125dd5261e6d9b0c5bc8b20b28",
+    .deps = .{},
+}

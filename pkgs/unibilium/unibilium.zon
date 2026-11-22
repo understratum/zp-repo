@@ -1,0 +1,8 @@
+.{
+    .name = "unibilium",
+    .version = "2.1.4",
+    .license = "NOASSERTION",
+    .url = "https://github.com/neovim/unibilium/archive/refs/tags/v2.1.4.tar.gz",
+    .hash = "7360907bcf79ba49f6fc4a504767ff86e93ab9018477026fcc70d5ab77e1f2c1",
+    .deps = .{},
+}

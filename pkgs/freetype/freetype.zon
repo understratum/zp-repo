@@ -1,0 +1,8 @@
+.{
+    .name = "freetype",
+    .version = "2.15.0",
+    .license = "FTL OR GPL-2.0-or-later",
+    .url = "https://github.com/freetype/freetype/archive/refs/tags/VER-2-15-0.tar.gz",
+    .hash = "87c7f1f8699b91e89f773f7dcfa505b044e1dae67f62a55d4e29c3afdcac4fb8",
+    .deps = .{"zlib", "bzip2", "brotli"},
+}

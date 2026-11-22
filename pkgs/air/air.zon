@@ -1,0 +1,8 @@
+.{
+    .name = "air",
+    .version = "1.67.4",
+    .license = "GPL-3.0",
+    .url = "https://github.com/air-verse/air/archive/refs/tags/v1.67.4.tar.gz",
+    .hash = "d74de50458f4f2cd744bb08a1acf84dbbcc99138ea0682176568f9a381a81887",
+    .deps = .{},
+}

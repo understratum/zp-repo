@@ -1,0 +1,8 @@
+.{
+    .name = "shfmt",
+    .version = "3.14.1",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/mvdan/sh/archive/refs/tags/v3.14.1.tar.gz",
+    .hash = "ec4bdb88ab6c95686be3a4eeb4ad77d2b49d33d2ed7b0a65035cd52d2d87c443",
+    .deps = .{},
+}

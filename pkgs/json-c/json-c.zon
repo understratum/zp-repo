@@ -1,0 +1,8 @@
+.{
+    .name = "json-c",
+    .version = "0.19-20260627",
+    .license = "NOASSERTION",
+    .url = "https://github.com/json-c/json-c/archive/refs/tags/json-c-0.19-20260627.tar.gz",
+    .hash = "f17a6d7d265cf840dfd8f0f46a606d98c6b5b26dc7cfe27275d1546a213086c8",
+    .deps = .{},
+}

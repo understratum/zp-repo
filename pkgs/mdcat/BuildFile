@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --bin "mdcat"
+install -Dm755 "target/release/mdcat" "$ZP_DESTDIR/usr/bin/mdcat"

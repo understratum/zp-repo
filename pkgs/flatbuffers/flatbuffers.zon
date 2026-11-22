@@ -1,0 +1,8 @@
+.{
+    .name = "flatbuffers",
+    .version = "25.12.19-2026-02-06-03fffb2",
+    .license = "Apache-2.0",
+    .url = "https://github.com/google/flatbuffers/archive/refs/tags/v25.12.19-2026-02-06-03fffb2.tar.gz",
+    .hash = "ccbce58684691de1e7d51f5e87786266b37d06ab66e9dfe2d0ec106fe50aace0",
+    .deps = .{},
+}

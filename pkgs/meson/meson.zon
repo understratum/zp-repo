@@ -1,0 +1,8 @@
+.{
+    .name = "meson",
+    .version = "1.12.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/mesonbuild/meson/archive/refs/tags/1.12.1.tar.gz",
+    .hash = "64731a3a08ae94837e480f866cb1a2be9b12b9010899317f1db097ce5281a52a",
+    .deps = .{"python3"},
+}

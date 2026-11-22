@@ -1,0 +1,8 @@
+.{
+    .name = "task",
+    .version = "3.54.0",
+    .license = "MIT",
+    .url = "https://github.com/go-task/task/archive/refs/tags/v3.54.0.tar.gz",
+    .hash = "d9e92770c2c18f135701431d04bb24fb77b5f13464699683892bdfc0b26f2eb8",
+    .deps = .{},
+}

@@ -1,0 +1,8 @@
+.{
+    .name = "miniserve",
+    .version = "0.35.0",
+    .license = "MIT",
+    .url = "https://github.com/svenstaro/miniserve/archive/refs/tags/v0.35.0.tar.gz",
+    .hash = "8ae108c161f2ed740f8c4b4dfd0a80805adcbaf7a05a6128f2b4d8f5093f5490",
+    .deps = .{},
+}

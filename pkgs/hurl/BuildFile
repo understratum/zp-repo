@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --package "hurl" --bin "hurl"
+install -Dm755 "target/release/hurl" "$ZP_DESTDIR/usr/bin/hurl"

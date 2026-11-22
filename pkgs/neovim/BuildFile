@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+make CMAKE_BUILD_TYPE=Release
+make CMAKE_INSTALL_PREFIX=/usr DESTDIR="$ZP_DESTDIR" install

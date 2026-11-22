@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+install -d "$ZP_DESTDIR/usr/bin"
+go build -trimpath -buildvcs=false -o "$ZP_DESTDIR/usr/bin/gofumpt" .

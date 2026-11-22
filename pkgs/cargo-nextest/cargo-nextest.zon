@@ -1,0 +1,8 @@
+.{
+    .name = "cargo-nextest",
+    .version = "0.9.152",
+    .license = "Apache-2.0",
+    .url = "https://github.com/nextest-rs/nextest/archive/refs/tags/cargo-nextest-0.9.152.tar.gz",
+    .hash = "b93dfdf2c5d187f0154e71ee86bcfc40e8ea39abfe7bf20f95f1fa05c12afb2f",
+    .deps = .{},
+}

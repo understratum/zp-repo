@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --package "cargo-binstall" --bin "cargo-binstall"
+install -Dm755 "target/release/cargo-binstall" "$ZP_DESTDIR/usr/bin/cargo-binstall"

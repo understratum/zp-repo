@@ -1,0 +1,8 @@
+.{
+    .name = "libgit2",
+    .version = "1.9.7",
+    .license = "NOASSERTION",
+    .url = "https://github.com/libgit2/libgit2/archive/refs/tags/v1.9.7.tar.gz",
+    .hash = "1a4fbe7589e814777ae76b64734ad80f4ecad22cd33a22682a2aaea4ae5375e7",
+    .deps = .{"openssl", "zlib"},
+}

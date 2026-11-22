@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --bin "oha"
+install -Dm755 "target/release/oha" "$ZP_DESTDIR/usr/bin/oha"

@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cmake -S . -B build \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    "-DLIBDEFLATE_BUILD_SHARED_LIB=ON"
+cmake --build build --parallel "${ZP_JOBS:-$(nproc)}"
+DESTDIR="$ZP_DESTDIR" cmake --install build

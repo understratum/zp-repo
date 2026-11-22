@@ -1,0 +1,8 @@
+.{
+    .name = "libvorbis",
+    .version = "1.3.7",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/xiph/vorbis/archive/refs/tags/v1.3.7.tar.gz",
+    .hash = "270c76933d0934e42c5ee0a54a36280e2d87af1de3cc3e584806357e237afd13",
+    .deps = .{"libogg"},
+}

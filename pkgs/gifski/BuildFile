@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --bin "gifski"
+install -Dm755 "target/release/gifski" "$ZP_DESTDIR/usr/bin/gifski"

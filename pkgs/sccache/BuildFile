@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --bin "sccache"
+install -Dm755 "target/release/sccache" "$ZP_DESTDIR/usr/bin/sccache"

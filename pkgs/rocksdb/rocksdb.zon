@@ -1,0 +1,8 @@
+.{
+    .name = "rocksdb",
+    .version = "11.13.2",
+    .license = "GPL-2.0",
+    .url = "https://github.com/meta/rocksdb/archive/refs/tags/v11.13.2.tar.gz",
+    .hash = "6f12f408c4876175b1de73cfefcdd1baf0001ad8d799c1a09320d96e4fd213b5",
+    .deps = .{"zlib", "bzip2", "lz4", "zstd", "snappy"},
+}
