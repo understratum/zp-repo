@@ -1,0 +1,8 @@
+.{
+    .name = "grex",
+    .version = "1.4.6",
+    .license = "Apache-2.0",
+    .url = "https://github.com/pemistahl/grex/archive/refs/tags/v1.4.6.tar.gz",
+    .hash = "2ab9cb4c3d921711f23ea33a9e60dc11e9eaab450b16d1f2247bea2276822433",
+    .deps = .{},
+}

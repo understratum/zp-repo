@@ -1,0 +1,8 @@
+.{
+    .name = "broot",
+    .version = "1.62.0",
+    .license = "MIT",
+    .url = "https://github.com/Canop/broot/archive/refs/tags/v1.62.0.tar.gz",
+    .hash = "7c3445a6eef45fe67fe2e1f4e0e1f9dca796237d6303615e31b07798cc1716ba",
+    .deps = .{},
+}

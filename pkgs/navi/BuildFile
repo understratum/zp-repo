@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --bin "navi"
+install -Dm755 "target/release/navi" "$ZP_DESTDIR/usr/bin/navi"

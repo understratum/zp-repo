@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --bin "choose"
+install -Dm755 "target/release/choose" "$ZP_DESTDIR/usr/bin/choose"

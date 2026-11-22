@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --bin "procs"
+install -Dm755 "target/release/procs" "$ZP_DESTDIR/usr/bin/procs"

@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --bin "zellij"
+install -Dm755 "target/release/zellij" "$ZP_DESTDIR/usr/bin/zellij"

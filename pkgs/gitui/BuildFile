@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --bin "gitui"
+install -Dm755 "target/release/gitui" "$ZP_DESTDIR/usr/bin/gitui"

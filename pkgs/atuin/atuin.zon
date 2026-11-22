@@ -1,0 +1,8 @@
+.{
+    .name = "atuin",
+    .version = "18.25.1",
+    .license = "MIT",
+    .url = "https://github.com/atuinsh/atuin/archive/refs/tags/v18.25.1.tar.gz",
+    .hash = "44e3376136fc5786868121955adabc824ea7f2e5e0e51345a95100b3bd6d4c91",
+    .deps = .{},
+}

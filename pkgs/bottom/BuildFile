@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --package "bottom" --bin "btm"
+install -Dm755 "target/release/btm" "$ZP_DESTDIR/usr/bin/btm"

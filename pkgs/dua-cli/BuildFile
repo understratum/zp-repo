@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --package "dua-cli" --bin "dua"
+install -Dm755 "target/release/dua" "$ZP_DESTDIR/usr/bin/dua"
