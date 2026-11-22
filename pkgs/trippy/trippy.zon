@@ -1,0 +1,8 @@
+.{
+    .name = "trippy",
+    .version = "0.13.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/fujiapple852/trippy/archive/refs/tags/0.13.0.tar.gz",
+    .hash = "72e598d2e0b947e8bc46706021c511f169b7e7634a734c326e492e0f30725c35",
+    .deps = .{},
+}

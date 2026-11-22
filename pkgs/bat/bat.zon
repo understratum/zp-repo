@@ -1,0 +1,8 @@
+.{
+    .name = "bat",
+    .version = "0.26.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/sharkdp/bat/archive/refs/tags/v0.26.1.tar.gz",
+    .hash = "4474de87e084953eefc1120cf905a79f72bbbf85091e30cf37c9214eafcaa9c9",
+    .deps = .{},
+}

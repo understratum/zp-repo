@@ -1,0 +1,8 @@
+.{
+    .name = "ouch",
+    .version = "0.8.3",
+    .license = "MIT",
+    .url = "https://github.com/ouch-org/ouch/archive/refs/tags/0.8.3.tar.gz",
+    .hash = "f695393cbbd89cf5a2095c32235e585a85432ccfb902c78d2a2e9787abbb439c",
+    .deps = .{},
+}

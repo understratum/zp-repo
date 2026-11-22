@@ -1,0 +1,8 @@
+.{
+    .name = "glow",
+    .version = "3.0.0",
+    .license = "MIT",
+    .url = "https://github.com/charmbracelet/glow/archive/refs/tags/v3.0.0.tar.gz",
+    .hash = "18df6f3c09157021366b8c702b5badba405d37dbb42f132353eb50c1b0d3f464",
+    .deps = .{},
+}

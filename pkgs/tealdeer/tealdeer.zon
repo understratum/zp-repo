@@ -1,0 +1,8 @@
+.{
+    .name = "tealdeer",
+    .version = "1.9.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/tealdeer-rs/tealdeer/archive/refs/tags/v1.9.1.tar.gz",
+    .hash = "78e7dbfcc2c8975c143a9746b073a3af875cdee72819bc383fbd411bae2c553c",
+    .deps = .{},
+}

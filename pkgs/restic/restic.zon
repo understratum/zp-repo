@@ -1,0 +1,8 @@
+.{
+    .name = "restic",
+    .version = "0.20.0",
+    .license = "BSD-2-Clause",
+    .url = "https://github.com/restic/restic/archive/refs/tags/v0.20.0.tar.gz",
+    .hash = "7def5bbe05e62640f7b030b865b6f304701fd876f7836f5a6a603b56e1f4e30a",
+    .deps = .{},
+}

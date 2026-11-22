@@ -1,0 +1,8 @@
+.{
+    .name = "hexyl",
+    .version = "0.17.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/sharkdp/hexyl/archive/refs/tags/v0.17.0.tar.gz",
+    .hash = "72fa17397ad187eec6b295d02c7caabbb209a6e0d5706187b8a599bd5df8615e",
+    .deps = .{},
+}

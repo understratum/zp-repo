@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --package "du-dust" --bin "dust"
+install -Dm755 "target/release/dust" "$ZP_DESTDIR/usr/bin/dust"

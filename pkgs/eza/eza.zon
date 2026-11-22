@@ -1,0 +1,8 @@
+.{
+    .name = "eza",
+    .version = "0.23.5",
+    .license = "EUPL-1.2",
+    .url = "https://github.com/eza-community/eza/archive/refs/tags/v0.23.5.tar.gz",
+    .hash = "bbf179f2611c904014431740b559e8055276c12fcf978a7e31c271663548337f",
+    .deps = .{},
+}

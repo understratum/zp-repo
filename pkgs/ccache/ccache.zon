@@ -1,0 +1,8 @@
+.{
+    .name = "ccache",
+    .version = "4.14.3",
+    .license = "GPL-3.0-or-later",
+    .url = "https://github.com/ccache/ccache/archive/refs/tags/v4.14.3.tar.gz",
+    .hash = "f769f9e3ad7fc9e8faf68bcc4f63ba52f246df49bb378924b2529d6f05b76161",
+    .deps = .{},
+}

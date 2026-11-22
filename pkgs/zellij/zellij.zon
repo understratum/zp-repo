@@ -1,0 +1,8 @@
+.{
+    .name = "zellij",
+    .version = "0.46.0",
+    .license = "MIT",
+    .url = "https://github.com/zellij-org/zellij/archive/refs/tags/v0.46.0.tar.gz",
+    .hash = "2dfa237fea447f3cc98954e81b0097b9d25841010036720e11f67880fe7861f0",
+    .deps = .{},
+}
