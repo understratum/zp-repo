@@ -1,0 +1,8 @@
+.{
+    .name = "hey",
+    .version = "0.1.5",
+    .license = "Apache-2.0",
+    .url = "https://github.com/rakyll/hey/archive/refs/tags/v0.1.5.tar.gz",
+    .hash = "f678bc0f07c62a6513726298873940b70099aa85244efa813f6a0d925092ffe9",
+    .deps = .{},
+}

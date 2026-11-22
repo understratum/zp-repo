@@ -1,0 +1,8 @@
+.{
+    .name = "git-absorb",
+    .version = "0.9.0",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/tummychow/git-absorb/archive/refs/tags/0.9.0.tar.gz",
+    .hash = "a0f74e6306d7fbd746d2b4a6856621d46a7f82e3e88b6bb8b6fc0480cf811f53",
+    .deps = .{"git"},
+}

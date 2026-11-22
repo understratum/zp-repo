@@ -1,0 +1,8 @@
+.{
+    .name = "step-cli",
+    .version = "0.31.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/smallstep/cli/archive/refs/tags/v0.31.0.tar.gz",
+    .hash = "cc79207697f733eade1017a2be0da067362bf3bc0c05a6c68eeb7bbd288713d3",
+    .deps = .{},
+}

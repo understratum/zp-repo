@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+if [ ! -x ./configure ]; then
+    if [ -f ./autogen.sh ]; then
+        sh ./autogen.sh
+    else
+        autoreconf -fi
+    fi
+fi
+./configure --prefix=/usr --disable-static
+make -j"${ZP_JOBS:-$(nproc)}"
+make DESTDIR="$ZP_DESTDIR" install

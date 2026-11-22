@@ -1,0 +1,8 @@
+.{
+    .name = "git-cliff",
+    .version = "2.14.2",
+    .license = "Apache-2.0",
+    .url = "https://github.com/orhun/git-cliff/archive/refs/tags/v2.14.2.tar.gz",
+    .hash = "fbbb1f8ade8e9affeaacd632bedc94ac898fb726516f2f5a86d1bfba947635f4",
+    .deps = .{},
+}

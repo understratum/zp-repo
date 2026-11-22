@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --package "git-cliff" --bin "git-cliff"
+install -Dm755 "target/release/git-cliff" "$ZP_DESTDIR/usr/bin/git-cliff"

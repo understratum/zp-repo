@@ -1,0 +1,8 @@
+.{
+    .name = "caddy",
+    .version = "2.11.9",
+    .license = "Apache-2.0",
+    .url = "https://github.com/caddyserver/caddy/archive/refs/tags/v2.11.9.tar.gz",
+    .hash = "fefbe1f72b7a7e244f348c20eba377bb1e6964f51594229d2f38c49eaa2aa9a4",
+    .deps = .{},
+}

@@ -1,0 +1,8 @@
+.{
+    .name = "hugo",
+    .version = "0.170.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/gohugoio/hugo/archive/refs/tags/v0.170.1.tar.gz",
+    .hash = "bfbac02de9f08914545490ef17501cb0d89e63cc95e05e51d5bd9907da20505b",
+    .deps = .{},
+}

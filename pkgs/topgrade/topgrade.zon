@@ -1,0 +1,8 @@
+.{
+    .name = "topgrade",
+    .version = "17.17.0",
+    .license = "GPL-3.0",
+    .url = "https://github.com/topgrade-rs/topgrade/archive/refs/tags/v17.17.0.tar.gz",
+    .hash = "098028f8ce381142d52aab7823c2a7d1ee208c11ae53bbc8b0bfc587d9813643",
+    .deps = .{},
+}

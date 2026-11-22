@@ -1,0 +1,8 @@
+.{
+    .name = "libunibreak",
+    .version = "libunibreak_8_0_1",
+    .license = "Zlib",
+    .url = "https://github.com/adah1972/libunibreak/archive/refs/tags/libunibreak_8_0_1.tar.gz",
+    .hash = "96e9074daf1f45ae9ddf461b5a9801991a6fe8b2025ea786486e0e023c34a2c5",
+    .deps = .{},
+}

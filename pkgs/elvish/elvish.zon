@@ -1,0 +1,8 @@
+.{
+    .name = "elvish",
+    .version = "0.21.0",
+    .license = "BSD-2-Clause",
+    .url = "https://github.com/elves/elvish/archive/refs/tags/v0.21.0.tar.gz",
+    .hash = "3a4b93c3c99fe2f9847de35d64be24e2d4b9c12d429cd9831b4571993a66bb7a",
+    .deps = .{},
+}

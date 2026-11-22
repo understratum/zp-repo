@@ -1,0 +1,8 @@
+.{
+    .name = "jj",
+    .version = "0.47.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/jj-vcs/jj/archive/refs/tags/v0.47.1.tar.gz",
+    .hash = "838fb5ddbf474ccee6639ce68835cedf88c8285b5c812599c56688286fb0b7a6",
+    .deps = .{},
+}

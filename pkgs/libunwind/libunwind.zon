@@ -1,0 +1,8 @@
+.{
+    .name = "libunwind",
+    .version = "1.8.3",
+    .license = "MIT",
+    .url = "https://github.com/libunwind/libunwind/archive/refs/tags/v1.8.3.tar.gz",
+    .hash = "4dcbdba4e25544d3753dbbcd5cc4cd36d3eb6e6d2f23d8ab61c0ee1ca6da54e3",
+    .deps = .{},
+}

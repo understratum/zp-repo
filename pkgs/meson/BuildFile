@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+python3 -m pip install --no-deps --no-build-isolation --prefix=/usr --root="$ZP_DESTDIR" .

@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --package "yazi-fm" --bin "yazi"
+cargo build --release --locked --package "yazi-cli" --bin "ya"
+install -Dm755 "target/release/yazi" "$ZP_DESTDIR/usr/bin/yazi"
+install -Dm755 "target/release/ya" "$ZP_DESTDIR/usr/bin/ya"

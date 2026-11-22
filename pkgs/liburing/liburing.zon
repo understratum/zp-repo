@@ -1,0 +1,8 @@
+.{
+    .name = "liburing",
+    .version = "2.15",
+    .license = "MIT",
+    .url = "https://github.com/axboe/liburing/archive/refs/tags/liburing-2.15.tar.gz",
+    .hash = "8d052f2622dcb3678cbaee5ff582a87572672a6c0a56533cdda5b65cb636120a",
+    .deps = .{},
+}

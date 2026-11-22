@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cmake -S . -B build \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr
+cmake --build build --parallel "${ZP_JOBS:-$(nproc)}"
+DESTDIR="$ZP_DESTDIR" cmake --install build
+cargo build --release --locked --package "tree-sitter-cli" --bin "tree-sitter"
+install -Dm755 "target/release/tree-sitter" "$ZP_DESTDIR/usr/bin/tree-sitter"

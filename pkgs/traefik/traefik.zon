@@ -1,0 +1,8 @@
+.{
+    .name = "traefik",
+    .version = "3.7.19",
+    .license = "MIT",
+    .url = "https://github.com/traefik/traefik/archive/refs/tags/v3.7.19.tar.gz",
+    .hash = "a9fe96056045a1ba8d7fadcaab0862bc9c9eec6975ecdccb85a2dd7e77a290fb",
+    .deps = .{},
+}

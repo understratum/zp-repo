@@ -1,0 +1,8 @@
+.{
+    .name = "libpsl",
+    .version = "0.23.3",
+    .license = "NOASSERTION",
+    .url = "https://github.com/rockdaboot/libpsl/archive/refs/tags/0.23.3.tar.gz",
+    .hash = "6ae8b6bd4d8632ca0808f496d490f92adf27fee1b4747505ee1a1f2d42a278b9",
+    .deps = .{"libidn2", "libunistring"},
+}

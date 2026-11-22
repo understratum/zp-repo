@@ -1,0 +1,8 @@
+.{
+    .name = "micro",
+    .version = "2.0.15",
+    .license = "MIT",
+    .url = "https://github.com/micro-editor/micro/archive/refs/tags/v2.0.15.tar.gz",
+    .hash = "612c775321c268c8f9e1767505ff378bca9b9ab66f5c41b69ecb2464ecf15084",
+    .deps = .{},
+}

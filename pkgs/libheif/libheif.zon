@@ -1,0 +1,8 @@
+.{
+    .name = "libheif",
+    .version = "1.23.7",
+    .license = "NOASSERTION",
+    .url = "https://github.com/strukturag/libheif/archive/refs/tags/v1.23.7.tar.gz",
+    .hash = "90e389caad285ca4946461d56d1c115e56bcbb5141d9038050282af91064fbc7",
+    .deps = .{"libde265", "libjpeg-turbo"},
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+cargo build --release --locked --package "cargo-deny" --bin "cargo-deny"
+install -Dm755 "target/release/cargo-deny" "$ZP_DESTDIR/usr/bin/cargo-deny"

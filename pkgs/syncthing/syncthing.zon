@@ -1,0 +1,8 @@
+.{
+    .name = "syncthing",
+    .version = "2.1.7",
+    .license = "MPL-2.0",
+    .url = "https://github.com/syncthing/syncthing/archive/refs/tags/v2.1.7.tar.gz",
+    .hash = "e9794cab0adf5b0a59d9b631e994dce055c57cb805228555bdfa68118be4bd0a",
+    .deps = .{},
+}

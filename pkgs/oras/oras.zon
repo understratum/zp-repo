@@ -1,0 +1,8 @@
+.{
+    .name = "oras",
+    .version = "1.4.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/oras-project/oras/archive/refs/tags/v1.4.0.tar.gz",
+    .hash = "453bda1279b166eb6c2bd84b5995b952403c388ad8eb2f77a9f269011f69788b",
+    .deps = .{},
+}
