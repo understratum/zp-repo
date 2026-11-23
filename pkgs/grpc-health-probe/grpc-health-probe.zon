@@ -1,0 +1,12 @@
+.{
+    .name = "grpc-health-probe",
+    .version = "0.4.63",
+    .license = "Apache-2.0",
+    .url = "https://github.com/grpc-ecosystem/grpc-health-probe/archive/refs/tags/v0.4.63.tar.gz",
+    .hash = "52f19aae8af33d58028975f83a31c0c95436fe5c19482a14508a8efc118364fa",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

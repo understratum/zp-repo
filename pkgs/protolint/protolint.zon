@@ -1,0 +1,12 @@
+.{
+    .name = "protolint",
+    .version = "0.58.0",
+    .license = "MIT",
+    .url = "https://github.com/yoheimuta/protolint/archive/refs/tags/v0.58.0.tar.gz",
+    .hash = "7d5f4650ed23f68c34a6be1ba77fb3661dd4b7b28b64664a479b6835febceb18",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

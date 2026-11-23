@@ -5,4 +5,8 @@
     .url = "https://ftp.gnu.org/gnu/gawk/gawk-5.4.2.tar.xz",
     .hash = "b95e4909533b5f988c6b5e5539b3b3ddf76e7d7df02ca2e5b5b7d6f62db78e6a",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

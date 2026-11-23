@@ -1,0 +1,12 @@
+.{
+    .name = "mockery",
+    .version = "3.9.1",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/vektra/mockery/archive/refs/tags/v3.9.1.tar.gz",
+    .hash = "c73f648fac846b84cca2db017255faa4fd363f72a7a748f281e55d07ed6b3372",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

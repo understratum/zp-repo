@@ -1,0 +1,12 @@
+.{
+    .name = "hiredis",
+    .version = "1.5.1",
+    .license = "BSD-3-Clause",
+    .url = "https://github.com/redis/hiredis/archive/refs/tags/v1.5.1.tar.gz",
+    .hash = "f5ec19151c0f4f15ca018c22b17b6f6739a672a4fc0c085b692aef69a154ebef",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
+}

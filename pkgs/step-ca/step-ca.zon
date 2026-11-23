@@ -1,0 +1,12 @@
+.{
+    .name = "step-ca",
+    .version = "0.30.2",
+    .license = "Apache-2.0",
+    .url = "https://github.com/smallstep/certificates/archive/refs/tags/v0.30.2.tar.gz",
+    .hash = "327391f301b79818f2418302516b4f6b41bdf08e38edc9011cc7f1b351e19452",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

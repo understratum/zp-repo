@@ -1,0 +1,12 @@
+.{
+    .name = "dnsx",
+    .version = "1.3.1",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/dnsx/archive/refs/tags/v1.3.1.tar.gz",
+    .hash = "2c14a27b00e3215e1c0dc07afe9e5e5c3f0a3502852f1d5f497a92b5e6cb63db",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

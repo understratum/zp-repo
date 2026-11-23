@@ -1,0 +1,12 @@
+.{
+    .name = "cross",
+    .version = "0.2.5",
+    .license = "Apache-2.0",
+    .url = "https://github.com/cross-rs/cross/archive/refs/tags/v0.2.5.tar.gz",
+    .hash = "8dfcad7aa8eb0b9ce18423c386fc03bc709e8c9ad2d7bcb1a77f9d1d1cd6fd2e",
+    .deps = .{"docker", "rust"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

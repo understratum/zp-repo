@@ -1,0 +1,12 @@
+.{
+    .name = "syft",
+    .version = "1.57.2",
+    .license = "Apache-2.0",
+    .url = "https://github.com/anchore/syft/archive/refs/tags/v1.57.2.tar.gz",
+    .hash = "1cf84a0b5481cc9b6bfa158e2cf1f51a69f4b3d2da1bb79be25511891f2dc473",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

@@ -1,0 +1,12 @@
+.{
+    .name = "httpx",
+    .version = "1.12.0",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/httpx/archive/refs/tags/v1.12.0.tar.gz",
+    .hash = "b29319c085537047bff8acf72c6cd4ecf17585ede97f4afdde2304431c74e64e",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

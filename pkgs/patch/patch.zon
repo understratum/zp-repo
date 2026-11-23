@@ -5,4 +5,8 @@
     .url = "https://ftp.gnu.org/gnu/patch/patch-2.8.1.tar.xz",
     .hash = "3240c7959c5347c8ed347e3c4201c0337bf4240d5cf09d68889e58eeaba30e17",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

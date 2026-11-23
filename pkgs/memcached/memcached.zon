@@ -5,4 +5,8 @@
     .url = "https://www.memcached.org/files/memcached-1.6.45.tar.gz",
     .hash = "d362c64e6d8d5287153501eabf7c85b4a761432fbf53f5d7b085d0bb1653c1dd",
     .deps = .{"libevent"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

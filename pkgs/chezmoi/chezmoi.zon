@@ -5,4 +5,8 @@
     .url = "https://github.com/twpayne/chezmoi/archive/refs/tags/v2.74.1.tar.gz",
     .hash = "818984475f981bb79d516f144386d0f4aeb03f035bca3c6d6287da2bdae61829",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

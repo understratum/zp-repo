@@ -5,4 +5,8 @@
     .url = "https://github.com/golangci/golangci-lint/archive/refs/tags/v2.15.0.tar.gz",
     .hash = "5411598703f014f1128b209f3d46da6f9f2c99a68783c90f846b4db1c8c08742",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

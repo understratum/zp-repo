@@ -5,4 +5,8 @@
     .url = "https://www.tcpdump.org/release/libpcap-1.11.0.tar.gz",
     .hash = "596389bc8560ea027dff9db8aaf6c173d992366d9aef4baf5d7c6d180b4d49ad",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
 }

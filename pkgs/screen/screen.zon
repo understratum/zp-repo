@@ -5,4 +5,8 @@
     .url = "https://ftp.gnu.org/gnu/screen/screen-5.0.2.tar.gz",
     .hash = "ca9a2c7e240919bc7ac12124593ae4529bb4eb5f7349d8857829b7e3f0b3b332",
     .deps = .{"ncurses"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

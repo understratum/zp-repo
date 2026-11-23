@@ -1,0 +1,12 @@
+.{
+    .name = "ffuf",
+    .version = "2.3.0",
+    .license = "MIT",
+    .url = "https://github.com/ffuf/ffuf/archive/refs/tags/v2.3.0.tar.gz",
+    .hash = "cdb2e58259f380862850eba587f71a9dc1738fb5edc1ea60414fae30fd0ed4f2",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

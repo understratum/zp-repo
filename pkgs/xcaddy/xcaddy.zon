@@ -1,0 +1,12 @@
+.{
+    .name = "xcaddy",
+    .version = "0.4.7",
+    .license = "Apache-2.0",
+    .url = "https://github.com/caddyserver/xcaddy/archive/refs/tags/v0.4.7.tar.gz",
+    .hash = "a8a092d076ea70a42198d4b35c0872da893c6d32c2d02c9df5b8935ee8ffb7ec",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

@@ -5,4 +5,8 @@
     .url = "https://github.com/git-lfs/git-lfs/archive/refs/tags/v3.8.1.tar.gz",
     .hash = "6ab3e7ffa03014f3ca574f06c1df835ccf9e8c079a3c5c1134b95bdff9c106c0",
     .deps = .{"git"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

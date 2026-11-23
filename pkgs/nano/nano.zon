@@ -5,4 +5,8 @@
     .url = "https://www.nano-editor.org/dist/v9/nano-9.3.tar.xz",
     .hash = "a9affc52c9596ee0682bcdd4ceb3c0b235eb221d83d733dfd9b0dff45897cb0d",
     .deps = .{"ncurses"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

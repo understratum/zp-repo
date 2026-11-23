@@ -5,4 +5,8 @@
     .url = "https://github.com/rfjakob/gocryptfs/archive/refs/tags/v2.7.0.tar.gz",
     .hash = "71cf484a4c1a26c2d1286bdd39ba19bbbd558b4c6c08574bb3177c8817a1f517",
     .deps = .{"fuse3"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

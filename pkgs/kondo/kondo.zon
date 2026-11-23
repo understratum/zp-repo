@@ -1,0 +1,12 @@
+.{
+    .name = "kondo",
+    .version = "0.9",
+    .license = "MIT",
+    .url = "https://github.com/tbillington/kondo/archive/refs/tags/v0.9.tar.gz",
+    .hash = "188c577f1d21d783cd2b4b43a5cbae5ffe8b085e5773e10846af55968ddd50c4",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

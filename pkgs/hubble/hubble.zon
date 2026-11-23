@@ -1,0 +1,12 @@
+.{
+    .name = "hubble",
+    .version = "1.20.4",
+    .license = "Apache-2.0",
+    .url = "https://github.com/cilium/hubble/archive/refs/tags/v1.20.4.tar.gz",
+    .hash = "c3041595f6db56021d7b427d069c7175380d706e9bd96597d67911be6c95bcf2",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

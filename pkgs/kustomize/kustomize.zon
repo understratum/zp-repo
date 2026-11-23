@@ -1,0 +1,12 @@
+.{
+    .name = "kustomize",
+    .version = "5.8.3",
+    .license = "Apache-2.0",
+    .url = "https://github.com/kubernetes-sigs/kustomize/archive/refs/tags/kustomize/v5.8.3.tar.gz",
+    .hash = "c823ae7b7e1461d82dfe7e592823796c6a98d9633cdbe33c64508b65c9911a57",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

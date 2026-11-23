@@ -5,4 +5,8 @@
     .url = "https://github.com/jj-vcs/jj/archive/refs/tags/v0.47.1.tar.gz",
     .hash = "838fb5ddbf474ccee6639ce68835cedf88c8285b5c812599c56688286fb0b7a6",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

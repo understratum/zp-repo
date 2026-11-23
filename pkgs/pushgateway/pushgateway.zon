@@ -1,0 +1,12 @@
+.{
+    .name = "pushgateway",
+    .version = "1.11.4",
+    .license = "Apache-2.0",
+    .url = "https://github.com/prometheus/pushgateway/archive/refs/tags/v1.11.4.tar.gz",
+    .hash = "7ae6541d891c9f700f81f2ef10f2d465fd61cc73b14a6f92ba0ce6b6250b5649",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

@@ -1,0 +1,12 @@
+.{
+    .name = "aws-iam-authenticator",
+    .version = "0.7.24",
+    .license = "Apache-2.0",
+    .url = "https://github.com/kubernetes-sigs/aws-iam-authenticator/archive/refs/tags/v0.7.24.tar.gz",
+    .hash = "388d274decebfe44dcea09e00bb3d11d97feb9b6f3fed5f069452a9c6df05754",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

@@ -1,0 +1,12 @@
+.{
+    .name = "uncover",
+    .version = "1.2.1",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/uncover/archive/refs/tags/v1.2.1.tar.gz",
+    .hash = "80e5e8531ac53a24b4acba2ab96e5ab33ecc137a3e0baa97caabae0c859b64eb",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

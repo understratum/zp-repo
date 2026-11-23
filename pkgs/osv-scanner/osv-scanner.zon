@@ -1,0 +1,12 @@
+.{
+    .name = "osv-scanner",
+    .version = "2.7.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/google/osv-scanner/archive/refs/tags/v2.7.1.tar.gz",
+    .hash = "35472c072bca6571df8019843c3d2c2c7379160cc2c32fa1fe4c68f86cdd7704",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

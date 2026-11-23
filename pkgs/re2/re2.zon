@@ -5,4 +5,8 @@
     .url = "https://github.com/google/re2/archive/refs/tags/2025-11-05.tar.gz",
     .hash = "87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
 }

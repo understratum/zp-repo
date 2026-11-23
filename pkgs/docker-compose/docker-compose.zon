@@ -1,0 +1,12 @@
+.{
+    .name = "docker-compose",
+    .version = "5.8.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/docker/compose/archive/refs/tags/v5.8.0.tar.gz",
+    .hash = "1836019594ad054f8459cea7efc1d52eae7d05c64217c4efffe02d0d2930c44b",
+    .deps = .{"docker"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

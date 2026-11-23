@@ -5,4 +5,8 @@
     .url = "https://github.com/ImageOptim/gifski/archive/refs/tags/1.34.0.tar.gz",
     .hash = "c9711473615cb20d7754e8296621cdd95cc068cb04b640f391cd71f8787b692c",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

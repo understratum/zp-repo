@@ -1,0 +1,12 @@
+.{
+    .name = "asnmap",
+    .version = "1.2.0",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/asnmap/archive/refs/tags/v1.2.0.tar.gz",
+    .hash = "f4c615392cf206930361588a03b3df8f46775faabf37b84a398068dbe7159008",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

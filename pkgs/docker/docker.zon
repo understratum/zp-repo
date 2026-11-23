@@ -1,0 +1,12 @@
+.{
+    .name = "docker",
+    .version = "29.10.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/docker/cli/archive/refs/tags/v29.10.0.tar.gz",
+    .hash = "7b955259e070e839586faff4957ce71484380f3aff5caf519470c1448f9e9192",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

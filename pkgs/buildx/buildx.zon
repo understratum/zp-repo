@@ -1,0 +1,12 @@
+.{
+    .name = "buildx",
+    .version = "0.39.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/docker/buildx/archive/refs/tags/v0.39.1.tar.gz",
+    .hash = "ccb549da4ec19317a04e68c9a3603553503743b8deee0e0613e0cb06c87ed6bc",
+    .deps = .{"docker"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

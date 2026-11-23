@@ -1,0 +1,12 @@
+.{
+    .name = "ko",
+    .version = "0.19.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/ko-build/ko/archive/refs/tags/v0.19.1.tar.gz",
+    .hash = "7accc1f4ad074285086573b084387bef5871872ef16e3f292d5818a99e4feeae",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

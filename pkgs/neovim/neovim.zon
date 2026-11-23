@@ -5,4 +5,8 @@
     .url = "https://github.com/neovim/neovim/archive/refs/tags/v0.12.6.tar.gz",
     .hash = "8629fdc5eb951daf89a76f68cad12f2f1e03fab0d539150ba3fe6d177d254b7f",
     .deps = .{"libuv", "unibilium", "tree-sitter"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

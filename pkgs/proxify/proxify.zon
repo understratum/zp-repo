@@ -1,0 +1,12 @@
+.{
+    .name = "proxify",
+    .version = "0.0.16",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/proxify/archive/refs/tags/v0.0.16.tar.gz",
+    .hash = "a156d8094ac5a31bc92029c1a9e02300caa5e2f189dc13949410d792e9f4e63c",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

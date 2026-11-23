@@ -1,0 +1,12 @@
+.{
+    .name = "pastel",
+    .version = "0.12.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/sharkdp/pastel/archive/refs/tags/v0.12.0.tar.gz",
+    .hash = "2903853f24d742fe955edd9bea17947eb8f3f44000a8ac528d16f2ea1e52b78b",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

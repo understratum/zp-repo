@@ -1,0 +1,12 @@
+.{
+    .name = "alertmanager",
+    .version = "0.35.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/prometheus/alertmanager/archive/refs/tags/v0.35.0.tar.gz",
+    .hash = "4c4355655ee6d303991fba6e10ca2357978ca9ca0fb47ce925482d685aa34ff7",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

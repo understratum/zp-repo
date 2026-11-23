@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+install -d "$ZP_BUILD_DIR/gopath/src/github.com/docker" "$ZP_DESTDIR/usr/bin"
+rm -rf "$ZP_BUILD_DIR/gopath/src/github.com/docker/cli"
+cp -a "$ZP_SRC_DIR" "$ZP_BUILD_DIR/gopath/src/github.com/docker/cli"
+cd "$ZP_BUILD_DIR/gopath/src/github.com/docker/cli"
+GO111MODULE=auto GOPATH="$ZP_BUILD_DIR/gopath" make binary
+install -Dm755 build/docker "$ZP_DESTDIR/usr/bin/docker"

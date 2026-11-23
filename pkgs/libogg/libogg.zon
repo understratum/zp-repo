@@ -5,4 +5,8 @@
     .url = "https://github.com/xiph/ogg/archive/refs/tags/v1.3.6.tar.gz",
     .hash = "95b643da661155d79db9de2fca55daed3a8d491039829def246aacb3d9201c81",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
 }

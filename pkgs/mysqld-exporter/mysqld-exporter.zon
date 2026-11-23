@@ -1,0 +1,12 @@
+.{
+    .name = "mysqld-exporter",
+    .version = "0.21.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/prometheus/mysqld_exporter/archive/refs/tags/v0.21.0.tar.gz",
+    .hash = "35a1f02a4ad81fa49fa6b1b3a3fb17a29a5e8df0019d52fb518c1a67f1ba5092",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

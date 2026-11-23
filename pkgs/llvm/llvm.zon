@@ -5,4 +5,8 @@
     .url = "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.6/llvm-project-23.1.6.src.tar.xz",
     .hash = "d3b86ab29cfb4445a6652e5c2642ccc75e04e38084dde3701d323320f35a31da",
     .deps = .{"cmake", "ninja", "zlib", "zstd", "libffi", "ncurses"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

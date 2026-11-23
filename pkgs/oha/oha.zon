@@ -5,4 +5,8 @@
     .url = "https://github.com/hatoo/oha/archive/refs/tags/v1.17.0.tar.gz",
     .hash = "cd869a518c11252b4aaf2c12dc0c64527df2b69bc8f55b104139814912e67817",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

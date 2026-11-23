@@ -1,0 +1,12 @@
+.{
+    .name = "mold",
+    .version = "3.0.0",
+    .license = "MIT",
+    .url = "https://github.com/rui314/mold/archive/refs/tags/v3.0.0.tar.gz",
+    .hash = "1dee837e227b0c3f2661def602ef8ddc0b889ae5b1d28c1ddec5f29e08e5ceb5",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

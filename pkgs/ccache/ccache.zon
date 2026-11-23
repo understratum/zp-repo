@@ -5,4 +5,8 @@
     .url = "https://github.com/ccache/ccache/archive/refs/tags/v4.14.3.tar.gz",
     .hash = "f769f9e3ad7fc9e8faf68bcc4f63ba52f246df49bb378924b2529d6f05b76161",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

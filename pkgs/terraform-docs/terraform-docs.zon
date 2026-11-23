@@ -1,0 +1,12 @@
+.{
+    .name = "terraform-docs",
+    .version = "0.25.1",
+    .license = "MIT",
+    .url = "https://github.com/terraform-docs/terraform-docs/archive/refs/tags/v0.25.1.tar.gz",
+    .hash = "eef26f765a2193b7f8e4010082a53e0f3ea46ed61b1b61abeb607d75e09caecc",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

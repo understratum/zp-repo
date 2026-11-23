@@ -5,4 +5,8 @@
     .url = "https://github.com/mr-karan/doggo/archive/refs/tags/v1.4.2.tar.gz",
     .hash = "9c5d1d0d800f72e80d35f6731fa3a80435f5a1af08af900a6b77142600e19395",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }
