@@ -1,0 +1,12 @@
+.{
+    .name = "ldconfig",
+    .version = "2.42",
+    .license = "LGPL-2.1-or-later",
+    .url = "https://codeload.github.com/bminor/glibc/tar.gz/refs/tags/glibc-2.42",
+    .hash = "90267bbbcfb8f631021a6c3ecc898514958948f4f43d6178d40be2da437b192d",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

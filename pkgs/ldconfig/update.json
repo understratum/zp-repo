@@ -1,0 +1,8 @@
+{
+  "type": "github-tag",
+  "owner": "bminor",
+  "repo": "glibc",
+  "tag_pattern": "^glibc-[0-9]+[.][0-9]+$",
+  "version_pattern": "^glibc-([0-9]+[.][0-9]+)$",
+  "url_template": "https://codeload.github.com/bminor/glibc/tar.gz/refs/tags/glibc-{version}"
+}

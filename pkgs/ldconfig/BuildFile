@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+: "${ZP_DESTDIR:?ZP_DESTDIR is required}"
+JOBS="${ZP_JOBS:-$(nproc)}"
+
+# Build only glibc's ldconfig utility, not the libc itself.
+mkdir -p build
+cd build
+../configure --prefix=/usr --disable-werror
+make -j"$JOBS" elf/ldconfig
+
+install -Dm755 elf/ldconfig "$ZP_DESTDIR/usr/bin/ldconfig"
+mkdir -p "$ZP_DESTDIR/usr/sbin"
+ln -s ../bin/ldconfig "$ZP_DESTDIR/usr/sbin/ldconfig"
