@@ -1,0 +1,12 @@
+.{
+    .name = "alterx",
+    .version = "0.1.0",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/alterx/archive/refs/tags/v0.1.0.tar.gz",
+    .hash = "6bcb57f569b99daebc7d7c94e8168d04e1e8ff1815eb8a1ce4e97ec45ff6fd04",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

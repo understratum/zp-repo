@@ -1,0 +1,12 @@
+.{
+    .name = "mapcidr",
+    .version = "1.1.97",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/mapcidr/archive/refs/tags/v1.1.97.tar.gz",
+    .hash = "d1253ab474de254cb77628d3274bf6fdcf087223f219dcf26186de83776bf717",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

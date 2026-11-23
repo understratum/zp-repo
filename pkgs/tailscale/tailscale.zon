@@ -5,4 +5,8 @@
     .url = "https://github.com/tailscale/tailscale/archive/refs/tags/v1.104.7.tar.gz",
     .hash = "fa1c922b33d0f6db6b073800d7a62fa84081323d247b21547c63a98ed7ecac14",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

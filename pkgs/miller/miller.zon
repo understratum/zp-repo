@@ -5,4 +5,8 @@
     .url = "https://github.com/johnkerl/miller/archive/refs/tags/v6.22.0.tar.gz",
     .hash = "a3cec3b8bf74f1e6eddb708d6ae768e6ec70f10e345980de42cbc24df15f0c70",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

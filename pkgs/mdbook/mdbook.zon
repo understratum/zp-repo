@@ -5,4 +5,8 @@
     .url = "https://github.com/rust-lang/mdBook/archive/refs/tags/v0.5.4.tar.gz",
     .hash = "107614330c35c77d53b6f6ce7826c50eed087650efe5646a4d0a16ca6bf5544b",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

@@ -5,4 +5,8 @@
     .url = "https://github.com/ClementTsang/bottom/archive/refs/tags/0.15.0.tar.gz",
     .hash = "9b38fd551ef9e67bb8dc09a658e7c9594913fc5c43154f264d5b776416ad1c4d",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

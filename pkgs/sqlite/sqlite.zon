@@ -5,4 +5,8 @@
     .url = "https://www.sqlite.org/2026/sqlite-autoconf-3540100.tar.gz",
     .hash = "926ef8d3eab93fbf6e06011901273eec076b25594a4e1cdadd50c987f4f6d64e",
     .deps = .{"readline"},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
 }

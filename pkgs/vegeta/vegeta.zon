@@ -5,4 +5,8 @@
     .url = "https://github.com/tsenart/vegeta/archive/refs/tags/v12.13.0.tar.gz",
     .hash = "4a360c815f5a8bdcae6db184860788696bb1c63d6999cc676e47690fc8b659e5",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

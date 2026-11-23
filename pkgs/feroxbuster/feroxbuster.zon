@@ -1,0 +1,12 @@
+.{
+    .name = "feroxbuster",
+    .version = "2.14.0",
+    .license = "MIT",
+    .url = "https://github.com/epi052/feroxbuster/archive/refs/tags/v2.14.0.tar.gz",
+    .hash = "1d6cc31d5ce3bd21e8b58ef32ac5745f6684682278be4b905b229cf49990887d",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

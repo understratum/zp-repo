@@ -5,4 +5,8 @@
     .url = "https://github.com/libffi/libffi/releases/download/v3.8.1/libffi-3.8.1.tar.gz",
     .hash = "81e879c094cc5ec3186c48510c6385ac6b3e866192e8bc71a35245703757ee40",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
 }

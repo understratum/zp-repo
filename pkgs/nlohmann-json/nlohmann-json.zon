@@ -1,0 +1,12 @@
+.{
+    .name = "nlohmann-json",
+    .version = "3.12.0",
+    .license = "MIT",
+    .url = "https://github.com/nlohmann/json/archive/refs/tags/v3.12.0.tar.gz",
+    .hash = "4b92eb0c06d10683f7447ce9406cb97cd4b453be18d7279320f7b2f025c10187",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

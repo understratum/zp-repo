@@ -1,0 +1,12 @@
+.{
+    .name = "lf",
+    .version = "r42",
+    .license = "MIT",
+    .url = "https://github.com/gokcehan/lf/archive/refs/tags/r42.tar.gz",
+    .hash = "7a8f7c2c86419270b713b6235dced7b9d0e68732e74a1e0f375f774fff4023ca",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

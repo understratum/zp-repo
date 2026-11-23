@@ -5,4 +5,8 @@
     .url = "https://github.com/simdjson/simdjson/archive/refs/tags/v5.2.0.tar.gz",
     .hash = "499176afd4b32fbe6f65551ef573b880407280072e1c19e22df0b45da58cdf64",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
 }

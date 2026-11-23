@@ -1,0 +1,12 @@
+.{
+    .name = "nancy",
+    .version = "2.1.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/sonatype-nexus-community/nancy/archive/refs/tags/v2.1.1.tar.gz",
+    .hash = "df3b1ae5800153cd90414ee3f3993fbb6bb8f7a0c03b1d56e3bfb2901e4fff6d",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

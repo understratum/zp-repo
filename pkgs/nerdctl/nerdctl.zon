@@ -1,0 +1,12 @@
+.{
+    .name = "nerdctl",
+    .version = "2.4.2",
+    .license = "Apache-2.0",
+    .url = "https://github.com/containerd/nerdctl/archive/refs/tags/v2.4.2.tar.gz",
+    .hash = "f73026262a1cab7b6a8f3df66da54dbe52268184359c41408468d9b75d3b41d8",
+    .deps = .{"containerd", "runc"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

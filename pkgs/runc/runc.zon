@@ -1,0 +1,12 @@
+.{
+    .name = "runc",
+    .version = "1.5.3",
+    .license = "Apache-2.0",
+    .url = "https://github.com/opencontainers/runc/archive/refs/tags/v1.5.3.tar.gz",
+    .hash = "22e3e29e93c71b9d56caa95fed66b6448dd2db282129067ead987b2003837d1a",
+    .deps = .{"libseccomp"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

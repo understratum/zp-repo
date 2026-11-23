@@ -1,0 +1,12 @@
+.{
+    .name = "gobuster",
+    .version = "3.8.2",
+    .license = "Apache-2.0",
+    .url = "https://github.com/OJ/gobuster/archive/refs/tags/v3.8.2.tar.gz",
+    .hash = "6919232eafbd0c4bbc9664d7f434b6a8d82133aa09f1400341ef6985ceff208a",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

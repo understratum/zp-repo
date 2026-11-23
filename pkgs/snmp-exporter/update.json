@@ -1,0 +1,5 @@
+{
+  "type": "github",
+  "owner": "prometheus",
+  "repo": "snmp_exporter"
+}

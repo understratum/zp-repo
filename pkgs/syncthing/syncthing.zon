@@ -5,4 +5,8 @@
     .url = "https://github.com/syncthing/syncthing/archive/refs/tags/v2.1.7.tar.gz",
     .hash = "e9794cab0adf5b0a59d9b631e994dce055c57cb805228555bdfa68118be4bd0a",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

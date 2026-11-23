@@ -5,4 +5,8 @@
     .url = "https://github.com/dalance/procs/archive/refs/tags/v0.14.12.tar.gz",
     .hash = "f2fab583fe98a9ae9505c5eecf4f3d9d4ad9bcb5d478a8222d52c87aa1ac602e",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

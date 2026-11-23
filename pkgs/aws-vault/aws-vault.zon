@@ -1,0 +1,12 @@
+.{
+    .name = "aws-vault",
+    .version = "7.2.0",
+    .license = "MIT",
+    .url = "https://github.com/99designs/aws-vault/archive/refs/tags/v7.2.0.tar.gz",
+    .hash = "3f2f1d0ec06eb0873f9b96b59dc70f9fcc832dc97b927af3dbab6cdc87477b0e",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+install -d "$ZP_DESTDIR/usr/bin"
+cargo build --release --locked --manifest-path pueue/Cargo.toml --bins
+install -Dm755 target/release/pueue "$ZP_DESTDIR/usr/bin/pueue"
+install -Dm755 target/release/pueued "$ZP_DESTDIR/usr/bin/pueued"

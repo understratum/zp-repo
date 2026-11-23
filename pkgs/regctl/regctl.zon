@@ -1,0 +1,12 @@
+.{
+    .name = "regctl",
+    .version = "0.11.7",
+    .license = "Apache-2.0",
+    .url = "https://github.com/regclient/regclient/archive/refs/tags/v0.11.7.tar.gz",
+    .hash = "a648fcf3b5b81c55773f47f6d7401d1904675c32520a76159d960a9e8798badd",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

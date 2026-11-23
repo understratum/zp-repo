@@ -1,0 +1,12 @@
+.{
+    .name = "lsd",
+    .version = "1.2.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/lsd-rs/lsd/archive/refs/tags/v1.2.0.tar.gz",
+    .hash = "dae8d43087686a4a1de0584922608e9cbab00727d0f72e4aa487860a9cbfeefa",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

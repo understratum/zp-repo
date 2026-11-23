@@ -1,0 +1,12 @@
+.{
+    .name = "cvemap",
+    .version = "2.0.2",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/cvemap/archive/refs/tags/v2.0.2.tar.gz",
+    .hash = "d3954dbcbee35fc7ff5417d3314949d7f7e1cf4939082a153515ce58b51ab7a6",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

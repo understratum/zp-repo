@@ -1,0 +1,12 @@
+.{
+    .name = "infracost",
+    .version = "0.10.50",
+    .license = "Apache-2.0",
+    .url = "https://github.com/infracost/infracost/archive/refs/tags/v0.10.50.tar.gz",
+    .hash = "7f165f7a3d1de79ef60ce809c11880426298f8aba6c80301f7f69aeb3c96e095",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

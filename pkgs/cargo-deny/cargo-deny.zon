@@ -5,4 +5,8 @@
     .url = "https://github.com/EmbarkStudios/cargo-deny/archive/refs/tags/0.22.0.tar.gz",
     .hash = "0a80f1a7c79a5ba638e88f33049c4cf41aae71d86a93404a20a8d3beddd1ade6",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

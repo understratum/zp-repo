@@ -1,0 +1,12 @@
+.{
+    .name = "staticcheck",
+    .version = "2026.2.2",
+    .license = "MIT",
+    .url = "https://github.com/dominikh/go-tools/archive/refs/tags/2026.2.2.tar.gz",
+    .hash = "f957eca5ee25bba46711433bfc320e0e900304ebb89641264bde256031926139",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

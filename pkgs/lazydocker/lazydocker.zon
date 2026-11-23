@@ -1,0 +1,12 @@
+.{
+    .name = "lazydocker",
+    .version = "0.25.2",
+    .license = "MIT",
+    .url = "https://github.com/jesseduffield/lazydocker/archive/refs/tags/v0.25.2.tar.gz",
+    .hash = "405071220e5be9aa061c65d290e0347143b73ae0a3cc01df164f0105de2b53c4",
+    .deps = .{"docker"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

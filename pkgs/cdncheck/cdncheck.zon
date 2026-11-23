@@ -1,0 +1,12 @@
+.{
+    .name = "cdncheck",
+    .version = "1.4.0",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.4.0.tar.gz",
+    .hash = "4bc726abe474033408f01b0f5cc488de1b3211836a5bec9446c6fa8a431d72c0",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

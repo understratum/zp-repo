@@ -1,0 +1,12 @@
+.{
+    .name = "gbenchmark",
+    .version = "1.10.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/google/benchmark/archive/refs/tags/v1.10.0.tar.gz",
+    .hash = "acc5c7c0fbed855c4aaa2d7c3c36fb82b0c15c28f4e151e3f679c2fc0aa404af",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
+}

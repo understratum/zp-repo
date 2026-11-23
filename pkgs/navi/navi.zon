@@ -5,4 +5,8 @@
     .url = "https://github.com/denisidoro/navi/archive/refs/tags/v2.24.0.tar.gz",
     .hash = "4c10f47c306826255b07483b7e94eed8ffc1401555c52434a56246295d3f2728",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

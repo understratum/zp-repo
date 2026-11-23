@@ -1,0 +1,12 @@
+.{
+    .name = "kopia",
+    .version = "0.23.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/kopia/kopia/archive/refs/tags/v0.23.1.tar.gz",
+    .hash = "0009ca0b2249a7042f779e722e87f8d8c12262117b308db522f7c8d46720a22e",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

@@ -1,0 +1,12 @@
+.{
+    .name = "grpcui",
+    .version = "1.5.4",
+    .license = "MIT",
+    .url = "https://github.com/fullstorydev/grpcui/archive/refs/tags/v1.5.4.tar.gz",
+    .hash = "664137b2982cad4bc5e8a8e5963fb46fe3686b6aff0f2f925172fd98d2f8a12f",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

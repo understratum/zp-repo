@@ -1,0 +1,12 @@
+.{
+    .name = "velero",
+    .version = "1.19.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/vmware-tanzu/velero/archive/refs/tags/v1.19.0.tar.gz",
+    .hash = "789f13190b0d35a8edadddfb7dfb442236f2e2699c6a78b1d3fd45da7c7957c1",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

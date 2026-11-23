@@ -5,4 +5,8 @@
     .url = "https://github.com/cloudflare/cloudflared/archive/refs/tags/2026.11.1.tar.gz",
     .hash = "d72ba7465d392a7c82be85e9417c0c923aa69e7c6dbc9baaeb42bb49a8f0572d",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

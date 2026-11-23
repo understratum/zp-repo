@@ -5,4 +5,8 @@
     .url = "https://github.com/abseil/abseil-cpp/archive/refs/tags/20260817.0.tar.gz",
     .hash = "f7e05179df39c45434cad433f5783840bb3788ef322976f9138bc6b72b3a107d",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
 }

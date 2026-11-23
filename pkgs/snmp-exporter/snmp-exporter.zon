@@ -1,0 +1,12 @@
+.{
+    .name = "snmp-exporter",
+    .version = "0.31.0",
+    .license = "Apache-2.0",
+    .url = "https://github.com/prometheus/snmp_exporter/archive/refs/tags/v0.31.0.tar.gz",
+    .hash = "9c52951606f9138af758fd28693497181ad119b48433c0a542b4a2128049bd04",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

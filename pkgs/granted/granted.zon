@@ -1,0 +1,12 @@
+.{
+    .name = "granted",
+    .version = "0.40.0",
+    .license = "MIT",
+    .url = "https://github.com/common-fate/granted/archive/refs/tags/v0.40.0.tar.gz",
+    .hash = "93170305101876b6508f79f84f8a998f97ed7ffb9ec11d363088875297b00f4e",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

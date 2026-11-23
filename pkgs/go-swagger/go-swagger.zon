@@ -1,0 +1,12 @@
+.{
+    .name = "go-swagger",
+    .version = "0.36.8",
+    .license = "Apache-2.0",
+    .url = "https://github.com/go-swagger/go-swagger/archive/refs/tags/v0.36.8.tar.gz",
+    .hash = "88e6be5f201e9039a78d818cda7cf5b13c411085701c02001b385c2c6978963c",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

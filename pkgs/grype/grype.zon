@@ -1,0 +1,12 @@
+.{
+    .name = "grype",
+    .version = "0.122.1",
+    .license = "Apache-2.0",
+    .url = "https://github.com/anchore/grype/archive/refs/tags/v0.122.1.tar.gz",
+    .hash = "d801d084d24d19cd916a3cb4aaa1e12b26833f50698cd968c9ff815a0e7839b4",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

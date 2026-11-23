@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+cd "$ZP_SRC_DIR"
+install -d "$ZP_DESTDIR/usr/bin"
+cargo build --release --locked --package mold-cli --bin mold
+install -Dm755 target/release/mold "$ZP_DESTDIR/usr/bin/mold"

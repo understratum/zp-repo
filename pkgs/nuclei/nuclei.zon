@@ -1,0 +1,12 @@
+.{
+    .name = "nuclei",
+    .version = "3.11.1",
+    .license = "MIT",
+    .url = "https://github.com/projectdiscovery/nuclei/archive/refs/tags/v3.11.1.tar.gz",
+    .hash = "64c6e21eb8cd141d39cbb0241228fb40fd4370dbe39dc9f13e1069c718b711f9",
+    .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
+}

@@ -5,4 +5,8 @@
     .url = "https://github.com/arxanas/git-branchless/archive/refs/tags/v0.11.1.tar.gz",
     .hash = "e71f3e0b6cdbe9948dcabd6e70a18a29285d8a6af3e54bf91192f1aea7099c7c",
     .deps = .{"git", "sqlite"},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

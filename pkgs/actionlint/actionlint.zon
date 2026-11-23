@@ -5,4 +5,8 @@
     .url = "https://github.com/rhysd/actionlint/archive/refs/tags/v1.7.12.tar.gz",
     .hash = "454800bd4f854592bcfe79b161f71d56e35940eb7016e48a26dd356adc9d400a",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

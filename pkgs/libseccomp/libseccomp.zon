@@ -5,4 +5,8 @@
     .url = "https://github.com/seccomp/libseccomp/archive/refs/tags/v2.6.2.tar.gz",
     .hash = "4e3dfa94dfc4c2aa21e5e707e5bfebc87063f2461b1d22f84e9d1ed507db7e4b",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{ "ldconfig" },
+        .pre_remove = &[_][]const u8{},
+    },
 }

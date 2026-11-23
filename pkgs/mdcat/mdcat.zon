@@ -5,4 +5,8 @@
     .url = "https://github.com/swsnr/mdcat/archive/refs/tags/mdcat-2.7.1.tar.gz",
     .hash = "460024d9795eb578be09ec2284af243627721151aa001aae6ffb5589380b2ba1",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

@@ -5,4 +5,8 @@
     .url = "https://github.com/starship/starship/archive/refs/tags/v1.27.0.tar.gz",
     .hash = "f1887ffa88a7ba437d2932501794047e28d03387996f7d1c364631c053cffc44",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }

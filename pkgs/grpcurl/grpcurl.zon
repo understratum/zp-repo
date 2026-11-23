@@ -5,4 +5,8 @@
     .url = "https://github.com/fullstorydev/grpcurl/archive/refs/tags/v1.9.4.tar.gz",
     .hash = "bea899ba2f483a951bf40aa05d41e069dd2f7bfe52d2a229717abfdb5620cb7c",
     .deps = .{},
+    .hooks = .{
+        .post_install = &[_][]const u8{},
+        .pre_remove = &[_][]const u8{},
+    },
 }
