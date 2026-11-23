@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+
+: "${ZP_DESTDIR:?ZP_DESTDIR is required}"
+
+# On musl there is no glibc ld.so.cache to rebuild. The upstream compatibility
+# command succeeds without arguments (as package post-install hooks invoke it).
+install -Dm755 filesystem/usr/bin/ldconfig "$ZP_DESTDIR/usr/bin/ldconfig"
+mkdir -p "$ZP_DESTDIR/usr/sbin"
+ln -s ../bin/ldconfig "$ZP_DESTDIR/usr/sbin/ldconfig"
+install -Dm644 COPYRIGHT "$ZP_DESTDIR/usr/share/licenses/ldconfig-musl/COPYRIGHT"
