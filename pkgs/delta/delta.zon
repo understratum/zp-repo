@@ -6,7 +6,7 @@
     .hash = "d9d502396e3595ee8fd926f1ed2e54ac9935baabd3569a3753efab36304f90fa",
     .deps = .{"git", "ripgrep"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

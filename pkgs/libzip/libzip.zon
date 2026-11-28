@@ -6,7 +6,7 @@
     .hash = "eb660b05d6d98742fd0466c416fb7867e9c1c101f00502f1efee0a2c089ad5c4",
     .deps = .{"zlib"},
     .hooks = .{
-        .post_install = &[_][]const u8{ "ldconfig" },
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{ "ldconfig" },
+        .pre_remove = .{},
     },
 }

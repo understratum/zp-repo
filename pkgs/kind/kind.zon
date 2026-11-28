@@ -6,7 +6,7 @@
     .hash = "8b00b127eb567f30b028cb032d236d990404e9fd83ce7798db7f9c7a305fab34",
     .deps = .{"docker"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

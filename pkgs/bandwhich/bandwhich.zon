@@ -6,7 +6,7 @@
     .hash = "aafb96d059cf9734da915dca4f5940c319d2e6b54e2ffb884332e9f5e820e6d7",
     .deps = .{"libpcap"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

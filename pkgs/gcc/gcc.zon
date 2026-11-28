@@ -6,7 +6,7 @@
     .hash = "e6738e29597f733270731aa90600f37ffdc045079dfc27ec7e8192cc81085c3e",
     .deps = .{"gmp", "mpfr", "mpc", "zlib", "zstd", "texinfo"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

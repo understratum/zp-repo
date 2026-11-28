@@ -6,7 +6,7 @@
     .hash = "9480e329e989f70d69886ded470c7f8cfe6c0667cc4196d4837ac9e668fb7404",
     .deps = .{},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

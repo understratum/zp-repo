@@ -6,7 +6,7 @@
     .hash = "90e389caad285ca4946461d56d1c115e56bcbb5141d9038050282af91064fbc7",
     .deps = .{"libde265", "libjpeg-turbo"},
     .hooks = .{
-        .post_install = &[_][]const u8{ "ldconfig" },
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{ "ldconfig" },
+        .pre_remove = .{},
     },
 }

@@ -6,7 +6,7 @@
     .hash = "289bb207935e5b4f241239f9832e665fa6b9636c3f87f479e125371e13842b8e",
     .deps = .{},
     .hooks = .{
-        .post_install = &[_][]const u8{ "ldconfig" },
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{ "ldconfig" },
+        .pre_remove = .{},
     },
 }

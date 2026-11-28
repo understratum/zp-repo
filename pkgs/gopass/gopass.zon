@@ -6,7 +6,7 @@
     .hash = "c098cad3a55d7c1021b84e12e8a2c0d6bf67f72b234902218b1413b2c01af95a",
     .deps = .{"git"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }
