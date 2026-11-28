@@ -1,9 +1,9 @@
 .{
     .name = "dust",
-    .version = "1.2.7",
+    .version = "1.2.8",
     .license = "Apache-2.0",
-    .url = "https://github.com/bootandy/dust/archive/refs/tags/v1.2.7.tar.gz",
-    .hash = "923a2eed637d2ea5f4ad5f820b6f87cc6e0081cfa4bc5ed1fe09278dd74db963",
+    .url = "https://github.com/bootandy/dust/archive/refs/tags/v1.2.8.tar.gz",
+    .hash = "2df7ea0258025b2061e1a1819ee7fc48b69fbf8c084c5f0e51a457f37695453e",
     .deps = .{},
     .hooks = .{
         .post_install = &[_][]const u8{},

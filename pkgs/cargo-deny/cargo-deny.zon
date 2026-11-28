@@ -1,9 +1,9 @@
 .{
     .name = "cargo-deny",
-    .version = "0.22.0",
+    .version = "0.22.2",
     .license = "Apache-2.0",
-    .url = "https://github.com/EmbarkStudios/cargo-deny/archive/refs/tags/0.22.0.tar.gz",
-    .hash = "0a80f1a7c79a5ba638e88f33049c4cf41aae71d86a93404a20a8d3beddd1ade6",
+    .url = "https://github.com/EmbarkStudios/cargo-deny/archive/refs/tags/0.22.2.tar.gz",
+    .hash = "ac56e12dfab673dcbf4f219a1f49ea8ed2165a98db6e7227a8bda9f221a755e6",
     .deps = .{},
     .hooks = .{
         .post_install = &[_][]const u8{},

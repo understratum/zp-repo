@@ -1,9 +1,9 @@
 .{
     .name = "cosign",
-    .version = "3.1.4",
+    .version = "3.1.6",
     .license = "Apache-2.0",
-    .url = "https://github.com/sigstore/cosign/archive/refs/tags/v3.1.4.tar.gz",
-    .hash = "438339dec811a8352837bc140ca0e987c12e6b6403d4da7ce12cd226fee6c800",
+    .url = "https://github.com/sigstore/cosign/archive/refs/tags/v3.1.6.tar.gz",
+    .hash = "ca0b3030158ab97ba6927c75f0586c3d2449651e95015890351174f6753da88d",
     .deps = .{},
     .hooks = .{
         .post_install = &[_][]const u8{},

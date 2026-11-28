@@ -1,9 +1,9 @@
 .{
     .name = "traefik",
-    .version = "3.7.19",
+    .version = "3.8.0",
     .license = "MIT",
-    .url = "https://github.com/traefik/traefik/archive/refs/tags/v3.7.19.tar.gz",
-    .hash = "a9fe96056045a1ba8d7fadcaab0862bc9c9eec6975ecdccb85a2dd7e77a290fb",
+    .url = "https://github.com/traefik/traefik/archive/refs/tags/v3.8.0.tar.gz",
+    .hash = "9c3a5a5aefd7d77cc2c7052b47cba3bb88764a81e07e5504aa9a7f0445e908a0",
     .deps = .{},
     .hooks = .{
         .post_install = &[_][]const u8{},

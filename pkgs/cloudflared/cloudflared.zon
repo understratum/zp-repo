@@ -1,9 +1,9 @@
 .{
     .name = "cloudflared",
-    .version = "2026.11.1",
+    .version = "2026.11.2",
     .license = "Apache-2.0",
-    .url = "https://github.com/cloudflare/cloudflared/archive/refs/tags/2026.11.1.tar.gz",
-    .hash = "d72ba7465d392a7c82be85e9417c0c923aa69e7c6dbc9baaeb42bb49a8f0572d",
+    .url = "https://github.com/cloudflare/cloudflared/archive/refs/tags/2026.11.2.tar.gz",
+    .hash = "e135894809a639d248f46636088ea8b659ed4d063be4873a541b2d9c2de36790",
     .deps = .{},
     .hooks = .{
         .post_install = &[_][]const u8{},
