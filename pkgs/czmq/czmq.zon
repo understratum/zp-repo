@@ -6,7 +6,7 @@
     .hash = "83457cd32a2c2615b8d7ebcf91b198cb0d8df383a2072b96835ab250164d8a83",
     .deps = .{"libzmq"},
     .hooks = .{
-        .post_install = &[_][]const u8{ "ldconfig" },
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{ "ldconfig" },
+        .pre_remove = .{},
     },
 }

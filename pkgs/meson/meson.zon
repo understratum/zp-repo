@@ -6,7 +6,7 @@
     .hash = "64731a3a08ae94837e480f866cb1a2be9b12b9010899317f1db097ce5281a52a",
     .deps = .{"python3"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

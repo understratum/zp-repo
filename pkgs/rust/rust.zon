@@ -6,7 +6,7 @@
     .hash = "db56bbc64db491ceda6b78a2811a6d121c639338906fd944f720289cbd02245c",
     .deps = .{"cmake", "ninja", "pkg-config", "openssl", "zlib", "curl"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

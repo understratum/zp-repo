@@ -6,7 +6,7 @@
     .hash = "82b35c61c78b475647bdc981a183c5b5ab0d979e1caee94186e8f9150f2b0d0d",
     .deps = .{"openssl", "zlib"},
     .hooks = .{
-        .post_install = &[_][]const u8{ "ldconfig" },
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{ "ldconfig" },
+        .pre_remove = .{},
     },
 }

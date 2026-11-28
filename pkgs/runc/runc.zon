@@ -6,7 +6,7 @@
     .hash = "e3ee6cd56e1a7ce9c21620d9a3dd04c18211ba369a8bc958c4c546d41f580ed5",
     .deps = .{"libseccomp"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

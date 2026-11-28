@@ -6,7 +6,7 @@
     .hash = "a8b164386494cb85bb255a415a3f5f80afe7a0c4491da5d113b3a0f951087e65",
     .deps = .{"ncurses"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

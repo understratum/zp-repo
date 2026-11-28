@@ -6,7 +6,7 @@
     .hash = "2e45678806a8a1c7307d4b4298b11aab6d947799bdce986c67fd9c693dac98a5",
     .deps = .{"curl", "openssl"},
     .hooks = .{
-        .post_install = &[_][]const u8{},
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{},
+        .pre_remove = .{},
     },
 }

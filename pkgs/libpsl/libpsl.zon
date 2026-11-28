@@ -6,7 +6,7 @@
     .hash = "6ae8b6bd4d8632ca0808f496d490f92adf27fee1b4747505ee1a1f2d42a278b9",
     .deps = .{"libidn2", "libunistring"},
     .hooks = .{
-        .post_install = &[_][]const u8{ "ldconfig" },
-        .pre_remove = &[_][]const u8{},
+        .post_install = .{ "ldconfig" },
+        .pre_remove = .{},
     },
 }
