@@ -1,9 +1,9 @@
 .{
     .name = "lego",
-    .version = "5.7.0",
+    .version = "5.8.0",
     .license = "MIT",
-    .url = "https://github.com/go-acme/lego/archive/refs/tags/v5.7.0.tar.gz",
-    .hash = "0d8c5583717559bd33631b366c73bd0b46b332a3e50362a84db2ad299e284c75",
+    .url = "https://github.com/go-acme/lego/archive/refs/tags/v5.8.0.tar.gz",
+    .hash = "c536853627d2480611cc728819b400d994cd02c02df6711808552183b762cb15",
     .deps = .{},
     .hooks = .{
         .post_install = &[_][]const u8{},

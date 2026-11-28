@@ -1,9 +1,9 @@
 .{
     .name = "sccache",
-    .version = "0.19.0",
+    .version = "0.20.1",
     .license = "Apache-2.0",
-    .url = "https://github.com/mozilla/sccache/archive/refs/tags/v0.19.0.tar.gz",
-    .hash = "2da079033cd19fd8e2a09f56f9a7d9d1a72d591ff3acdc47d95b920145cf2671",
+    .url = "https://github.com/mozilla/sccache/archive/refs/tags/v0.20.1.tar.gz",
+    .hash = "1568b19b3e9bcf911986670dbf92264100974319ddde0b1ccaeecfa82b953632",
     .deps = .{},
     .hooks = .{
         .post_install = &[_][]const u8{},

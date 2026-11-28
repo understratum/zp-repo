@@ -1,9 +1,9 @@
 .{
     .name = "valkey",
-    .version = "9.2.0",
+    .version = "9.2.1",
     .license = "BSD-3-Clause",
-    .url = "https://github.com/valkey-io/valkey/archive/refs/tags/9.2.0.tar.gz",
-    .hash = "a02cb44db1269b699629e419d4949e6e51e984b1f0e9a984e8ee1e1b3b7cc36f",
+    .url = "https://github.com/valkey-io/valkey/archive/refs/tags/9.2.1.tar.gz",
+    .hash = "fec5d34ac6f5c7f35cddcaae368734d8a789f1af2f7c29853e790f093d848d71",
     .deps = .{},
     .hooks = .{
         .post_install = &[_][]const u8{},
